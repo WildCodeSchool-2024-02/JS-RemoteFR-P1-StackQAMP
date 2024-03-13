@@ -1,5 +1,27 @@
 /* Variable */
 
-element {
-  --color-background-page: ;
+:root {
+  --color-background-page: #fef9d8;
+  --color-background-header-footer: rgba(217, 140, 79, 1);
+}
+
+/*  GENERAL */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header,
+footer {
+  background-color: var(--color-background-header-footer);
+}
+
+/* BODY */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-background-page);
+  margin: 0;
 }
