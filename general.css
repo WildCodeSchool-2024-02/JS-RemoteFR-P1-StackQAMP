@@ -3,7 +3,7 @@
 :root {
   --color-background-page: #fef9d8;
   --color-background-header-footer: rgba(217, 140, 79, 1);
-}
+  --color-tilte: rgba(155, 51, 86, 1); 
 
 /*  GENERAL */
 
@@ -24,4 +24,38 @@ body {
   font-family: Arial, sans-serif;
   background-color: var(--color-background-page);
   margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color:var(--color-tilte);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 80px;
+  font-weight: 800;
+  
+}
+
+/* Page crédits */
+
+section {
+  display: flex;
+  
+  justify-content: space-around;
+  align-items: center ;
+
+  div {
+  /*background-color: violet;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+
+}}
+
+.profile{
+  width: 200px;
+  border-radius: 50%;
+  display: flex;
+
 }
