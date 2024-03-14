@@ -3,14 +3,15 @@
 :root {
   --color-background-page: #fef9d8;
   --color-background-header-footer: rgba(217, 140, 79, 1);
+  --color-text-ul: rgba(236, 199, 70, 1);
+  --color-tilte: rgba(155, 51, 86, 1);
 }
 
 /*  GENERAL */
 
-* {
+html {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  line-height: 1.5;
 }
 
 header,
@@ -21,29 +22,130 @@ footer {
 /* BODY */
 
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  justify-content: space-between;
   background-color: var(--color-background-page);
+  height: 10rem;
   margin: 0;
 }
 
-/* Regles*/
+/*  HEADER */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    width: 10rem;
+  }
+}
+
+/* BURGER */
+
+/* Sidenav menu */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px;
+  background-color: #e8e8e8;
+  padding-top: 60px;
+  transition: left 0.5s ease;
+}
+
+/* Sidenav menu links */
+.sidenav {
+  a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--color-text-ul);
+    text-shadow: black -1px 0.5px, black -1px 0.5px, black -1px 0.5px;
+    display: block;
+    transition: 0.3s;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+.sidenav a:hover {
+  color: var(--color-background-header-footer);
+  cursor: pointer;
+}
+
+/* Active class */
+.sidenav.active {
+  left: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  font-size: 2.5rem;
+}
+
+/* Icône burger */
+
+.burger-icon {
+  margin-right: 4.5rem;
+
+  span {
+    display: block;
+    width: 3rem;
+    height: 4px;
+    background-color: var(--color-text-ul);
+    border-radius: 2rem;
+    box-shadow: 0rem 0rem 0.5rem black;
+    margin: 6px 0;
+  }
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1;
+  color: var(--color-text-ul);
+  text-shadow: black -1px 0.5px, black -1px 0.5px, black -1px 0.5px;
+}
 
 h1 {
-    font-size: 80px;
-    color: #9b3356;
-    font-weight: 800;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-      1px 1px 0 #000, 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
+  text-align: center;
+  color: var(--color-tilte);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000, 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 80px;
+  font-weight: 800;
+}
 
-  .card {
-    width: 800px; /*1*/
-  margin: 0px auto; /*2*/
-  background-color: white; /*3*/
-  box-shadow: 0px 5px 20px #999; /*4*/
-  }
+/* Page crédits */
 
-  main h1 {
+section {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+
+  div {
+    /*background-color: violet;*/
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 3em;
   }
+}
+
+.profile {
+  width: 200px;
+  border-radius: 50%;
+  display: flex;
+}

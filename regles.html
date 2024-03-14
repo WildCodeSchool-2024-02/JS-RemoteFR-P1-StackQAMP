@@ -9,7 +9,10 @@
   <body>
     <header>
       <img src="./assets/logo_stackquamp.png" alt="logo StackQamp" />
-      <nav>
+
+      <!-- close burger -->
+      <nav id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">x</a>
         <ul>
           <li><a href="./index.html">Accueil</a></li>
           <li><a href="./jeu.html">Jeu</a></li>
@@ -17,6 +20,15 @@
           <li><a href="./credit.html">Crédit</a></li>
         </ul>
       </nav>
+
+      <!-- open burger -->
+      <a href="#" id="openBtn">
+        <span class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
     </header>
     <main>
 
@@ -53,7 +65,6 @@
         AUTHEMAYOU
       </p>
     </footer>
-
+    <script src="./index.js"></script>
   </body>
 </html>
-²

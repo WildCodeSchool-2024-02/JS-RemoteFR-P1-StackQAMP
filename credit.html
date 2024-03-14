@@ -9,7 +9,10 @@
   <body>
     <header>
       <img src="./assets/logo_stackquamp.png" alt="logo StackQamp" />
-      <nav>
+
+      <!-- close burger -->
+      <nav id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">x</a>
         <ul>
           <li><a href="./index.html">Accueil</a></li>
           <li><a href="./jeu.html">Jeu</a></li>
@@ -17,28 +20,61 @@
           <li><a href="./credit.html">Crédit</a></li>
         </ul>
       </nav>
+
+      <!-- open burger -->
+      <a href="#" id="openBtn">
+        <span class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
     </header>
     <main>
       <h1>Crédits</h1>
       <section>
-        <h2>Amel BONNEVIE</h2>
-        <img src="#" alt="" />
-        <p>Descritpion</p>
+        <div>
+          <h2>Amel BONNEVIE</h2>
+          <img
+            class="profile"
+            src="./Photoprofil/amel.png"
+            alt="photoprofile"
+          />
+          <p>Descritpion</p>
+        </div>
       </section>
       <section>
-        <h2>Quentin THUILLIER</h2>
-        <img src="#" alt="" />
-        <p>Description</p>
+        <div>
+          <h2>Quentin THUILLIER</h2>
+          <img
+            class="profile"
+            src="./Photoprofil/quentin.png"
+            alt="photoprofile"
+          />
+          <p>Description</p>
+        </div>
       </section>
       <section>
-        <h2>Pierre DELAROCQUE</h2>
-        <img src="#" alt="" />
-        <p>Descritpion</p>
+        <div>
+          <h2>Pierre DELAROCQUE</h2>
+          <img
+            class="profile"
+            src="./Photoprofil/pierre.png"
+            alt="photoprofile"
+          />
+          <p>Descritpion</p>
+        </div>
       </section>
       <section>
-        <h2>Mégane AUTHEMAYOU</h2>
-        <img src="#" alt="" />
-        <p>Descritpion</p>
+        <div>
+          <h2>Mégane AUTHEMAYOU</h2>
+          <img
+            class="profile"
+            src="./Photoprofil/megane.png"
+            alt="photoprofile"
+          />
+          <p>Descritpion</p>
+        </div>
       </section>
     </main>
     <footer>
@@ -48,5 +84,6 @@
         AUTHEMAYOU
       </p>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>
