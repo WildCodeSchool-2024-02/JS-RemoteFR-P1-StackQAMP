@@ -139,7 +139,7 @@ button.enabled-animation {
   margin-bottom: 20px;
   font-weight: 800;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black, inset 2px 2px 3px rgba(0, 0, 0, 0.8); /* Contour noir et ombre interne */
+    1px 1px 0 black, inset 2px 2px 3px rgba(0, 0, 0, 0.8);
 }
 
 #click img {
@@ -154,11 +154,11 @@ button.enabled-animation {
 }
 
 #click.grow {
-  transform: scale(1.1); /* Grossit l'image */
+  transform: scale(1.1);
 }
 
 #click.move {
-  animation: move 0.5s ease; /* Ajoute une animation de mouvement */
+  animation: move 0.5s ease;
 }
 
 .plusOne {
@@ -166,8 +166,8 @@ button.enabled-animation {
   color: orange;
   font-size: 24px;
   animation: plusOneAnimation 1s ease-out;
-  pointer-events: none; /* empêche l'événement de souris d'être déclenché par les éléments enfants */
-  cursor: default; /* garde le curseur en mode pointeur */
+  pointer-events: none;
+  cursor: default;
 }
 
 @keyframes plusOneAnimation {
@@ -219,9 +219,9 @@ button.enabled-animation {
 
 .particle {
   position: absolute;
-  width: 20px; /* Ajustez la taille des particules selon vos besoins */
+  width: 20px;
   height: 20px;
-  transition: opacity 1s linear; /* Animation de dégradé */
+  transition: opacity 1s linear;
 }
 
 @keyframes particleMove {
@@ -231,11 +231,10 @@ button.enabled-animation {
   }
   100% {
     opacity: 0;
-    transform: translateY(-200px) translateX(200px); /* Déplacement des particules */
+    transform: translateY(-200px) translateX(200px);
   }
 }
 
-/* Supprimez le texte en gras et la couleur blanche de l'animation */
 @keyframes rainbow {
   0% {
     color: red;
@@ -260,11 +259,10 @@ button.enabled-animation {
   }
 }
 
-/* Ajoutez l'animation rainbow pour le texte du bouton bonus */
 .rainbow-text {
   animation: rainbow 1s linear infinite;
-  font-weight: normal; /* Supprimez le style de police en gras */
-  color: initial; /* Restaurez la couleur initiale du texte */
+  font-weight: normal;
+  color: initial;
 }
 
 .rainbow-image {
@@ -330,9 +328,9 @@ button.enabled-animation {
 }
 
 #volumeIcon {
-  width: 20px; /* ajustez la taille selon vos besoins */
+  width: 20px;
   height: 20px;
-  margin-right: 10px; /* ajustez la marge selon vos besoins */
+  margin-right: 10px;
 }
 
 footer,
@@ -357,7 +355,7 @@ footer {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Fond noir semi-transparent */
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .popup-content {
@@ -366,7 +364,7 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #000;
-  color: #fff; /* Couleur de police blanche */
+  color: #fff;
   padding: 20px;
   border-radius: 10px;
   height: 370px;
