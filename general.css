@@ -25,7 +25,7 @@ body {
   margin: 0;
   justify-content: space-between;
   background-color: var(--color-background-page);
-  height: 10rem;
+
   margin: 0;
 }
 
@@ -35,9 +35,19 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 10rem;
 
   img {
     width: 10rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    header {
+      justify-content: space-around;
+    }
+    img {
+      width: 20rem;
+    }
   }
 }
 
@@ -46,13 +56,13 @@ header {
 /* Sidenav menu */
 .sidenav {
   height: 100%;
-  width: 250px;
+  width: 15.5rem;
   position: fixed;
   z-index: 1;
   top: 0;
-  left: -250px;
+  left: -15.5rem;
   background-color: #e8e8e8;
-  padding-top: 60px;
+  padding-top: 3.7rem;
   transition: left 0.5s ease;
 }
 
@@ -107,14 +117,33 @@ header {
   }
 }
 
-/* FOOTER */
+/* Media queries burger menu */
 
-footer {
-  text-align: center;
-  font-size: 0.7rem;
-  line-height: 1;
-  color: var(--color-text-ul);
-  text-shadow: black -1px 0.5px, black -1px 0.5px, black -1px 0.5px;
+@media screen and (min-width: 768px) {
+  .sidenav {
+    height: auto;
+    width: auto;
+    position: static;
+    z-index: 1;
+    top: auto;
+    left: auto;
+    background-color: var(--color-background-header-footer);
+    padding-top: 0;
+    transition: auto;
+    font-size: 4rem;
+  }
+
+  .sidenav a,
+  ul,
+  li {
+    display: inline;
+    margin-right: 1rem;
+  }
+
+  #closeBtn,
+  #openBtn {
+    display: none;
+  }
 }
 
 h1 {
@@ -148,4 +177,20 @@ section {
   width: 200px;
   border-radius: 50%;
   display: flex;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1;
+  color: var(--color-text-ul);
+  text-shadow: black -1px 0.5px, black -1px 0.5px, black -1px 0.5px;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    font-size: 1rem;
+  }
 }
