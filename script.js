@@ -28,14 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const all = document.querySelector("*");
   const clickSound = document.getElementById("clickSound");
   const smallImagesContainer = document.getElementById("smallImagesContainer");
-  const purchaseSound = document.getElementById("PurchaseSound"); // Ajout du son d'achat
+  const purchaseSound = document.getElementById("PurchaseSound");
   const bonussound2 = document.getElementById("BonusSound2");
   const bonussound3 = document.getElementById("bonusSound3");
 
   const backgroundImage = document.getElementById("click").querySelector("img");
 
   backgroundImage.addEventListener("dragstart", (e) => {
-    e.preventDefault(); // Empêche le déplacement par défaut de l'image
+    e.preventDefault();
   });
 
   function updateScore() {
@@ -62,32 +62,27 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("popup").style.display = "block";
   }
 
-  // Fonction pour fermer le popup
   function closePopup() {
     document.getElementById("popup").style.display = "none";
   }
 
-  // Fonction pour afficher le popup lorsque la page est chargée
   window.addEventListener("load", function () {
     openPopup();
   });
 
-  // Récupérer le lien "Jeu" en utilisant une autre méthode (par exemple, par balise a)
   const jeuLink = document.querySelector('a[href="./jeu.html"]');
 
-  // Attacher un gestionnaire d'événements au lien "Jeu" pour ouvrir le popup
   jeuLink.addEventListener("click", function (event) {
-    event.preventDefault(); // Empêche le comportement par défaut du lien
+    event.preventDefault();
     openPopup();
   });
 
-  // Cibler la croix de fermeture du popup et attacher un gestionnaire d'événements pour fermer le popup lors du clic
   const closeBtn = document.querySelector(".close");
   closeBtn.addEventListener("click", closePopup);
 
   function enableButtonAnimation(button) {
     button.classList.add("enabled-animation");
-    purchaseSound.currentTime = 0; // Remet le son au début
+    purchaseSound.currentTime = 0;
     purchaseSound.play();
   }
 
@@ -100,9 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   clickImage.addEventListener("click", (e) => {
-    clickSound.currentTime = 0; // Remet le son au début
+    clickSound.currentTime = 0;
     clickSound.play();
-    // Add +1 animation
     const plusOne = document.createElement("div");
     plusOne.className = "plusOne";
     plusOne.textContent = "+1";
@@ -113,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
       plusOne.remove();
     }, 1000);
 
-    // Grow and shrink animation
     clickImage.classList.add("grow");
     setTimeout(() => {
       clickImage.classList.remove("grow");
@@ -137,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
       enableButtonAnimation(multiplierButton);
       handlePurchase();
       updateSmallImages();
-      purchaseSound.currentTime = 0; // Remet le son au début
+      purchaseSound.currentTime = 0;
       purchaseSound.play();
     }
   });
@@ -154,39 +147,32 @@ document.addEventListener("DOMContentLoaded", function () {
           score += multiplier;
           updateScore();
         }
-      }, 1000); // Intervalle de 1 seconde par défaut
+      }, 1000);
 
-      // Mettre à jour le texte du bouton
       autoclickButton.textContent = `Autoclick - Upgraded`;
-      autoclickButton.classList.add("green-text"); // Ajouter la classe pour le texte vert
+      autoclickButton.classList.add("green-text");
 
-      // Ajouter une animation après l'achat
-      autoclickButton.classList.add("grow"); // Ajouter l'animation de croissance
+      autoclickButton.classList.add("grow");
 
       enableButtonAnimation(autoclickButton);
-
-      // Appeler la fonction d'amélioration de l'autoclicker
     }
-    purchaseSound.currentTime = 0; // Remet le son au début
-    purchaseSound.play(); // Joue le son d'achat
+    purchaseSound.currentTime = 0;
+    purchaseSound.play();
   });
 
   document.getElementById("click").addEventListener("click", function (event) {
     const particlesContainer = document.getElementById("particlesContainer");
 
-    // Clear previous particles
     particlesContainer.innerHTML = "";
 
-    // Array of particle image sources
     const particleImages = ["bout1.png", "bout2.png", "TESTASUPPR.jpg"];
 
-    // Create particles
     const numParticles = 15;
     for (let i = 0; i < numParticles; i++) {
       const particle = document.createElement("img");
       particle.classList.add("particle");
       let randomIndex = Math.floor(Math.random() * particleImages.length);
-      // Randomly choose if an image with a 3% chance should appear
+
       if (Math.random() < 0.03) {
         randomIndex = Math.floor(Math.random() * 3);
       }
@@ -195,7 +181,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       particlesContainer.appendChild(particle);
 
-      // Position particles around the click point with slight variation
       const angle = Math.random() * Math.PI * 2;
       const distance = Math.random() * 100 + 50;
       const particleX =
@@ -209,7 +194,6 @@ document.addEventListener("DOMContentLoaded", function () {
       particle.style.left = particleX + "px";
       particle.style.top = particleY + "px";
 
-      // Disperse particles in different directions
       const deltaX = particleX - event.clientX;
       const deltaY = particleY - event.clientY;
       particle.style.animation = `particleMove 1s ease-out forwards`;
@@ -219,31 +203,26 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function upgradeAutoclicker() {
-    // Augmenter le niveau d'amélioration
     improvementCounter++;
 
-    // Augmenter le multiplicateur de clics
     multiplier++;
 
-    // Réduire le coût de l'autoclicker (par exemple, divisez le coût actuel par 2)
     autoclickCost /= 2;
 
-    // Mettre à jour l'affichage du score, du multiplicateur et du coût de l'autoclicker
     updateScore();
     updateMultiplier();
     autoclickButton.textContent = `Autoclick - Cost: ${autoclickCost}`;
 
-    // Réduire le temps de clique (par exemple, diminuer l'intervalle de temps de setInterval)
     clearInterval(autoclickInterval);
     autoclickInterval = setInterval(() => {
       if (autoclickerActive) {
         score += multiplier;
         updateScore();
       }
-    }, 500); // Réduire l'intervalle de clique à 500 millisecondes
+    }, 500);
   }
 
-  let autoclickInterval; // Déclarer une variable pour stocker l'intervalle du clic automatique
+  let autoclickInterval;
 
   autoclickButton.addEventListener("click", () => {
     if (score >= autoclickCost && !autoclickerActive) {
@@ -251,65 +230,58 @@ document.addEventListener("DOMContentLoaded", function () {
       autoclickerActive = true;
       autoclickButton.disabled = true;
 
-      // Démarrer l'autoclicker
       autoclickInterval = setInterval(() => {
         if (autoclickerActive) {
           score += multiplier;
           updateScore();
         }
-      }, 1000); // Intervalle de 1 seconde par défaut
+      }, 1000);
 
       showMessage("Achat effectué!");
       updateButtons();
     }
-    purchaseSound.currentTime = 0; // Remet le son au début
-    purchaseSound.play(); // Joue le son d'achat
+    purchaseSound.currentTime = 0;
+    purchaseSound.play();
   });
 
   function animateBonusImage() {
     bonusSound.play();
-    // Ajoutez une classe pour l'animation rainbow et le clignotement
+
     clickImage.classList.add("rainbow-image");
     clickImage.classList.add("blinking");
 
-    // Démarrez l'animation rainbow
     const rainbowAnimation = setInterval(() => {
       clickImage.style.filter = `hue-rotate(${Math.floor(
         Math.random() * 360
-      )}deg)`; // Change the hue randomly
+      )}deg)`;
     }, 100);
 
     function stopBonusSound() {
-      // Arrête le son lorsque le cooldown du bonus est terminé
       bonusSound.pause();
       bonusSound.currentTime = 0;
     }
 
-    // Arrêtez l'animation après la durée du cooldown
     setTimeout(() => {
-      clearInterval(rainbowAnimation); // Arrêtez l'animation rainbow
-      clickImage.style.filter = ""; // Réinitialisez le filtre
-      clickImage.classList.remove("rainbow-image"); // Supprimez la classe d'animation rainbow
-      clickImage.classList.remove("blinking"); // Supprimez la classe de clignotement
+      clearInterval(rainbowAnimation);
+      clickImage.style.filter = "";
+      clickImage.classList.remove("rainbow-image");
+      clickImage.classList.remove("blinking");
     }, bonusDuration * 1000);
   }
 
   function animateBonusButton() {
-    // Ajoutez une classe pour l'animation rainbow et le clignotement
     bonusButton.classList.add("rainbow");
     bonusButton.classList.add("blinking");
 
-    // Démarrez l'animation rainbow
     const rainbowAnimation = setInterval(() => {
-      bonusButton.style.color = `hsl(${Math.random() * 360}, 100%, 50%)`; // Change the text color randomly
+      bonusButton.style.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
     }, 100);
 
-    // Arrêtez l'animation après la durée du cooldown
     setTimeout(() => {
-      clearInterval(rainbowAnimation); // Arrêtez l'animation rainbow
-      bonusButton.style.color = ""; // Réinitialisez la couleur du texte
-      bonusButton.classList.remove("rainbow"); // Supprimez la classe d'animation rainbow
-      bonusButton.classList.remove("blinking"); // Supprimez la classe de clignotement
+      clearInterval(rainbowAnimation);
+      bonusButton.style.color = "";
+      bonusButton.classList.remove("rainbow");
+      bonusButton.classList.remove("blinking");
     }, bonusDuration * 1000);
   }
 
@@ -333,17 +305,16 @@ document.addEventListener("DOMContentLoaded", function () {
           stopButtonAnimation();
           stopBonusSound();
 
-          clickImage.style.filter = ""; // Réinitialisez le filtre
+          clickImage.style.filter = "";
         } else {
-          // Ajouter 500 points chaque seconde pendant le cooldown
           score += 500;
           updateScore();
           enableButtonAnimation(bonusButton);
         }
       }, 1000);
     }
-    purchaseSound.currentTime = 0; // Remet le son au début
-    purchaseSound.play(); // Joue le son d'achat
+    purchaseSound.currentTime = 0;
+    purchaseSound.play();
   });
 
   bonusButton2.addEventListener("click", () => {
@@ -352,46 +323,39 @@ document.addEventListener("DOMContentLoaded", function () {
       bonusActive = true;
       bonusButton2.disabled = true;
 
-      // Définir une variable pour stocker l'état de l'effet noir et blanc
       let grayscale = false;
 
-      // Définir l'intervalle pour faire clignoter l'image en noir et blanc
       const interval = setInterval(() => {
-        grayscale = !grayscale; // Inverser l'état de l'effet noir et blanc
+        grayscale = !grayscale;
 
-        // Appliquer l'effet noir et blanc sur l'image
         if (grayscale) {
           clickImage.style.filter = "grayscale(100%)";
           clickImage.style.animation = "rotate 0.5s linear infinite";
         } else {
-          clickImage.style.filter = ""; // Réinitialiser l'effet noir et blanc
+          clickImage.style.filter = "";
         }
-      }, 120); // Changer l'effet toutes les 500 millisecondes
+      }, 120);
 
-      // Définir la durée du bonus en secondes
       let bonusTimer = 45;
 
-      // Définir l'intervalle pour mettre à jour le compte à rebours et le score
       const countdownInterval = setInterval(() => {
         bonusTimer--;
         bonusButton2.textContent = `Bonus 2 (${bonusTimer}s)`;
 
         if (bonusTimer <= 0) {
-          clearInterval(interval); // Arrêter le clignotement de l'image
-          clearInterval(countdownInterval); // Arrêter le compte à rebours
+          clearInterval(interval);
+          clearInterval(countdownInterval);
           bonusActive = false;
           bonusButton2.textContent = "Bonus 2 - Cost: 20";
           bonusButton2.disabled = false;
           bonusButton2.classList.add("grow");
-          clickImage.style.filter = ""; // Réinitialiser l'effet noir et blanc
+          clickImage.style.filter = "";
           clickImage.style.animation = "";
 
-          // Arrêter l'animation de rotation
           stopButtonAnimation();
-          bonusSound2.pause(); // Arrêter le son du bonus
+          bonusSound2.pause();
           bonusSound2.currentTime = 0;
         } else {
-          // Ajouter 850 points chaque seconde pendant la durée du bonus
           score += 850;
           updateScore();
           enableButtonAnimation(bonusButton2);
@@ -408,25 +372,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const volumeSlider = document.getElementById("volumeSlider");
 
   volumeSlider.addEventListener("input", function () {
-    const volume = parseInt(volumeSlider.value) / 100; // Convertir la valeur en pourcentage en décimal
-    // Parcourir toutes les balises audio et vidéo sur la page
+    const volume = parseInt(volumeSlider.value) / 100;
+
     const mediaElements = document.querySelectorAll("audio, video");
     mediaElements.forEach((element) => {
-      element.volume = volume; // Définir le volume pour chaque élément
+      element.volume = volume;
     });
   });
 
   bonusButton3.addEventListener("click", () => {
-    // Vérifier si le score est supérieur ou égal à 20
     if (score >= 20) {
-      // Jouer le son attribué au bouton 3
       bonussound3.play();
 
-      // Déduire 20 du score
       score -= 20;
-      updateScore(); // Mettre à jour l'affichage du score
+      updateScore();
 
-      // Masquer les boutons et les pancakes
       const hiddenElements = [
         multiplierButton,
         autoclickButton,
@@ -444,9 +404,8 @@ document.addEventListener("DOMContentLoaded", function () {
         element.style.display = "none";
       });
 
-      // Ajouter un GIF avec les points qui montent au milieu de la page
       const gifElement = document.createElement("img");
-      gifElement.src = "gif/200w.gif"; // Chemin vers le GIF
+      gifElement.src = "gif/200w.gif";
       gifElement.style.position = "fixed";
       gifElement.style.top = "50%";
       gifElement.style.left = "50%";
@@ -457,39 +416,30 @@ document.addEventListener("DOMContentLoaded", function () {
       all.classList.add("rainbow-image");
       all.classList.add("blinking");
 
-      // Démarrez l'animation rainbow
       const rainbowAnimation = setInterval(() => {
-        all.style.filter = `hue-rotate(${Math.floor(Math.random() * 360)}deg)`; // Change the hue randomly
+        all.style.filter = `hue-rotate(${Math.floor(Math.random() * 360)}deg)`;
       }, 100);
 
-      // Augmenter le score de 1500 points par seconde
       const scoreIncrement = 1500;
-      const animationDuration = 30; // Durée de l'animation en secondes
+      const animationDuration = 30;
       const animationInterval = setInterval(() => {
         score += scoreIncrement;
         updateScore();
       }, 1000);
 
-      // Arrêter l'animation après la durée spécifiée
       setTimeout(() => {
-        // Réafficher les boutons et les pancakes
         hiddenElements.forEach((element) => {
           element.style.display = "block";
           all.style.animation = "none";
-          clearInterval(rainbowAnimation); // Arrêtez l'animation rainbow
-          all.style.filter = ""; // Réinitialisez le filtre
-          all.classList.remove("rainbow-image"); // Supprimez la classe d'animation rainbow
-          all.classList.remove("blinking"); //
+          clearInterval(rainbowAnimation);
+          all.style.filter = "";
+          all.classList.remove("rainbow-image");
+          all.classList.remove("blinking");
         });
 
-        // Supprimer le GIF
         document.body.removeChild(gifElement);
 
-        // Arrêter l'augmentation du score
         clearInterval(animationInterval);
-
-        // Réorganiser tous les éléments comme la navigation après l'animation
-        // Ici, vous pouvez réorganiser vos éléments de la manière appropriée
       }, animationDuration * 1000);
     }
   });
