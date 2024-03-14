@@ -4,44 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StackQamp</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <img src="./assets/logo_stackquamp.png" alt="logo StackQamp" />
+      <img
+        class="imghaut"
+        src="./assets/logo_stackquamp.png"
+        alt="logo StackQamp"
+      />
       <nav>
         <ul>
           <li><a href="./index.html">Accueil</a></li>
-          <li><a href="./jeu.html">Jeu</a></li>
+          <li><a href="./jeu.html" id="jeu-link">Jeu</a></li>
           <li><a href="./regles.html">Régle</a></li>
           <li><a href="./credit.html">Crédit</a></li>
         </ul>
       </nav>
-      <main>
-        <h1>Pan'Click</h1>
-        <section>
-          <img
-            src="./assets/pancakes_without_fruits.png"
-            alt="Montagne de pancakes"
-          />
-          <div>
-            <article></article>
-            <article></article>
-            <article></article>
-            <article></article>
-            <article></article>
-            <article></article>
-            <article></article>
-            <article></article>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <p>&copy wilders 2024</p>
-        <p>
-          créée par Amel BONNEVIE, Quentin THUILLIER, Pierre DELAROCQUE, Mégane
-          AUTHEMAYOU
-        </p>
-      </footer>
     </header>
+    <main>
+      <div class="topmain">
+        <h1 class="Pan">PAN' CLICK</h1>
+        <div id="score">PAN: <span id="scoreValue">0</span></div>
+      </div>
+      <div class="mainprinc">
+        <div class="flex">
+          <div id="click">
+            <a><img src="img/pck2png.png" class="pck" /></a>
+          </div>
+        </div>
+
+        <div class="buttongrid">
+          <button id="multiplier" class="disabled">
+            Multiplier x<span id="multiplierValue">1</span> | Cost:
+            <span id="multiplierCost">50</span>
+          </button>
+          <button id="autoclick" class="disabled">Autoclick | Cost: 20</button>
+          <button id="bonus" class="disabled">LIKE MARIO | Cost: 20</button>
+          <button id="bonus2" class="disabled">REVERSE HEAD | Cost: 20</button>
+          <button id="etc1" class="disabled">EPILEPT | Cost: 25000</button>
+          <button id="etc2" class="disabled">Bonus | Cost: 50000</button>
+          <button id="etc3" class="disabled">Bonus | Cost: 100 000</button>
+          <button id="etc4" class="disabled">Bonus | Cost: 250 000</button>
+          <button id="etc5" class="disabled">Bonus | Cost: 1 000 000</button>
+        </div>
+      </div>
+    </main>
+
+    <div id="particlesContainer"></div>
+
+    <!-- Ajout de l'élément audio pour le son de clic -->
+    <audio id="clickSound" src="sound/Splash Sound Effect.mp3"></audio>
+    <audio id="bonusSound" src="sound/mario.mp3"></audio>
+    <audio id="bonusSound2" src="sound/ghost.mp3"></audio>
+    <audio id="bonusSound3" src="sound/MIPOPS.mp3"></audio>
+    <audio id="PurchaseSound" src="sound/SoundBuy.mp3"></audio>
+
+    <script src="script.js"></script>
+
+    <div id="volumeSliderContainer">
+      <img src="img/songactive.png" alt="Volume Icon" id="volumeIcon" />
+      <input
+        type="range"
+        id="volumeSlider"
+        min="0"
+        max="100"
+        value="100"
+        step="1"
+      />
+    </div>
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <p class="textpop">
+          <strong>AVERTISSEMENT</strong> : Ce jeu peut contenir des effets
+          visuels clignotants qui peuvent déclencher des crises d'épilepsie chez
+          certaines personnes sensibles à la lumière. Si vous avez des
+          antécédents d'épilepsie ou si vous ressentez des symptômes tels que
+          vertiges, troubles de la vision ou convulsions pendant le jeu,
+          veuillez arrêter immédiatement de jouer et consulter un professionnel
+          de la santé.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy wilders 2024</p>
+      <p>
+        créée par Amel BONNEVIE, Quentin THUILLIER, Pierre DELAROCQUE, Mégane
+        AUTHEMAYOU
+      </p>
+    </footer>
   </body>
 </html>

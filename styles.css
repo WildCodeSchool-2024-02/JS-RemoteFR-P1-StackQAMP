@@ -1,0 +1,391 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fef9d8;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #d98c4f;
+  width: auto;
+  height: 150px;
+  margin: 0;
+  padding: 0px 0 0 0;
+}
+
+.imghaut {
+  width: 250px;
+  height: auto;
+  padding: 0 0 0 50px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 30px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  text-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+nav {
+  padding: 30px;
+  font-size: 30px;
+}
+
+li a {
+  text-decoration: none;
+  color: #ecc746;
+}
+
+.Pan {
+  font-size: 80px;
+  color: #9b3356;
+  font-weight: 800;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000, 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.topmain {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+h1 {
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.mainprinc {
+  background-color: #d98c4f;
+  margin: 0 120px 0 120px;
+  border-radius: 20px;
+  outline: 5px solid black;
+  height: 1100px;
+}
+
+button {
+  margin: 10px;
+  padding: 35px 20px;
+  font-size: 28px;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 3px solid #000;
+}
+
+.buttongrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 30px;
+}
+
+button.disabled {
+  background-color: grey;
+  color: rgb(255, 255, 255);
+  text-decoration: line-through;
+}
+
+button.enabled:hover {
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+button.enabled-animation {
+  animation: pulse 0.5s infinite alternate;
+  text-decoration: none;
+}
+
+.green-text {
+  color: green;
+}
+
+.pck {
+  width: 600px;
+  height: auto;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+#score {
+  color: #784fa1;
+  font-size: 55px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black, inset 2px 2px 3px rgba(0, 0, 0, 0.8); /* Contour noir et ombre interne */
+}
+
+#click img {
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+#click.grow {
+  transform: scale(1.1); /* Grossit l'image */
+}
+
+#click.move {
+  animation: move 0.5s ease; /* Ajoute une animation de mouvement */
+}
+
+.plusOne {
+  position: absolute;
+  color: orange;
+  font-size: 24px;
+  animation: plusOneAnimation 1s ease-out;
+  pointer-events: none; /* empêche l'événement de souris d'être déclenché par les éléments enfants */
+  cursor: default; /* garde le curseur en mode pointeur */
+}
+
+@keyframes plusOneAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+#grow {
+  animation: growAnimation 0.2s ease-in-out;
+}
+
+@keyframes growAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#particlesContainer {
+  position: absolute;
+}
+
+.particle {
+  position: absolute;
+  width: 20px; /* Ajustez la taille des particules selon vos besoins */
+  height: 20px;
+  transition: opacity 1s linear; /* Animation de dégradé */
+}
+
+@keyframes particleMove {
+  0% {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-200px) translateX(200px); /* Déplacement des particules */
+  }
+}
+
+/* Supprimez le texte en gras et la couleur blanche de l'animation */
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  16.666% {
+    color: orange;
+  }
+  33.333% {
+    color: yellow;
+  }
+  50% {
+    color: green;
+  }
+  66.666% {
+    color: blue;
+  }
+  83.333% {
+    color: indigo;
+  }
+  100% {
+    color: violet;
+  }
+}
+
+/* Ajoutez l'animation rainbow pour le texte du bouton bonus */
+.rainbow-text {
+  animation: rainbow 1s linear infinite;
+  font-weight: normal; /* Supprimez le style de police en gras */
+  color: initial; /* Restaurez la couleur initiale du texte */
+}
+
+.rainbow-image {
+  animation: rainbow-animation 0.5s infinite alternate;
+}
+
+@keyframes rainbow-animation {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.blinking {
+  animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.toggleSoundButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#soundIcon {
+  width: 30px;
+  height: 30px;
+}
+
+#volumeSliderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: stretch;
+  padding: 10px 0 200px 0;
+}
+
+#volumeIcon {
+  width: 20px; /* ajustez la taille selon vos besoins */
+  height: 20px;
+  margin-right: 10px; /* ajustez la marge selon vos besoins */
+}
+
+footer,
+p {
+  background-color: #d98c4f;
+  margin: 0;
+  height: 50px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px 0px 10px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fond noir semi-transparent */
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  color: #fff; /* Couleur de police blanche */
+  padding: 20px;
+  border-radius: 10px;
+  height: 370px;
+}
+
+.close {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.popup-text {
+  text-align: center;
+}
+
+.textpop {
+  background-color: #000;
+  font-size: 40px;
+}
