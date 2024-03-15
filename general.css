@@ -37,6 +37,7 @@
 button:hover {
   transform: scale(1.1);
 }
+
 .midacceuil {
   display: flex;
   flex-direction: column;
