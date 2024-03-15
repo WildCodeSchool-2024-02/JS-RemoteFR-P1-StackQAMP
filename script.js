@@ -582,6 +582,11 @@ document.addEventListener("DOMContentLoaded", function () {
       videoElement.style.left = "0";
       videoElement.style.zIndex = "9999";
 
+      // Ajouter un gestionnaire d'événement pour retirer la vidéo à la fin de la lecture
+      videoElement.addEventListener("ended", () => {
+        document.body.removeChild(videoElement);
+      });
+
       document.body.appendChild(videoElement);
 
       let bonusTimer = bonusDuration;
@@ -595,11 +600,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (bonusTimer <= 0) {
           clearInterval(interval);
           bonusActive = false;
-          bonusButton6.textContent = "Bonus 6 - Cost: 250 000";
+          bonusButton6.textContent = "LIKE A BEAR | Cost: 250 000";
           bonusButton6.disabled = false;
 
-          disableButtonAnimation(bonusButton6);
+          stopButtonAnimation(bonusButton6);
 
+          // Retirer la vidéo de la page
           document.body.removeChild(videoElement);
         }
       }, 1000);
