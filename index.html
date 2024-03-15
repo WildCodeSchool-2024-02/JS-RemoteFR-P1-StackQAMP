@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="general.css" />
     <title>StackQamp</title>
   </head>
   <body>
     <header>
       <img src="./assets/logo_stackquamp.png" alt="logo StackQamp" />
-      <nav>
+
+      <!-- close burger -->
+      <nav id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">x</a>
         <ul>
           <li><a href="./index.html">Accueil</a></li>
           <li><a href="./jeu.html">Jeu</a></li>
@@ -16,21 +20,31 @@
           <li><a href="./credit.html">Crédit</a></li>
         </ul>
       </nav>
-      <main>
-        <h1>Pan'Click</h1>
-        <img
-          src="./assets/pancakes_and_fruits.png"
-          alt="pancakes avec des myrtilles et des franboises"
-        />
-        <button>Jouer</button>
-      </main>
-      <footer>
-        <p>&copy wilders 2024</p>
-        <p>
-          créée par Amel BONNEVIE, Quentin THUILLIER, Pierre DELAROCQUE, Mégane
-          AUTHEMAYOU
-        </p>
-      </footer>
+
+      <!-- open burger -->
+      <a href="#" id="openBtn">
+        <span class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
     </header>
+    <main>
+      <h1>Pan'Click</h1>
+      <img
+        src="./assets/pancakes_and_fruits.png"
+        alt="pancakes avec des myrtilles et des franboises"
+      />
+      <button>Jouer</button>
+    </main>
+    <footer>
+      <p>&copy wilders 2024 Equipe STACKQUAMP</p>
+      <p>créée par</p>
+      <p class="cree">
+        Amel BONNEVIE, Quentin THUILLIER, Pierre DELAROCQUE, Mégane AUTHEMAYOU
+      </p>
+    </footer>
+    <script src="./index.js"></script>
   </body>
 </html>

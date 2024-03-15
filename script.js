@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     openPopup();
   });
 
-  const closeBtn = document.querySelector(".close");
+  const closeBtn = document.querySelector(".closepopup");
   closeBtn.addEventListener("click", closePopup);
 
   function enableButtonAnimation(button) {

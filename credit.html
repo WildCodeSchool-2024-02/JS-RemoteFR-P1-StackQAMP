@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="general.css" />
     <title>StackQamp</title>
   </head>
   <body>
     <header>
       <img src="./assets/logo_stackquamp.png" alt="logo StackQamp" />
-      <nav>
+
+      <!-- close burger -->
+      <nav id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">x</a>
         <ul>
           <li><a href="./index.html">Accueil</a></li>
           <li><a href="./jeu.html">Jeu</a></li>
@@ -16,36 +20,109 @@
           <li><a href="./credit.html">Crédit</a></li>
         </ul>
       </nav>
-      <main>
-        <h1>Crédits</h1>
-        <section>
-          <h2>Amel BONNEVIE</h2>
-          <img src="#" alt="" />
-          <p>Descritpion</p>
-        </section>
-        <section>
-          <h2>Quentin THUILLIER</h2>
-          <img src="#" alt="" />
-          <p>Description</p>
-        </section>
-        <section>
-          <h2>Pierre DELAROCQUE</h2>
-          <img src="#" alt="" />
-          <p>Descritpion</p>
-        </section>
-        <section>
-          <h2>Mégane AUTHEMAYOU</h2>
-          <img src="#" alt="" />
-          <p>Descritpion</p>
-        </section>
-      </main>
-      <footer>
-        <p>&copy wilders 2024</p>
-        <p>
-          créée par Amel BONNEVIE, Quentin THUILLIER, Pierre DELAROCQUE, Mégane
-          AUTHEMAYOU
-        </p>
-      </footer>
+
+      <!-- open burger -->
+      <a href="#" id="openBtn">
+        <span class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
     </header>
+    <main>
+      <h1>Crédits</h1>
+      <div class="block-container">
+        <section>
+          <div class="grid-container">
+            <img
+              class="profile"
+              src="./Photoprofil/amel.png"
+              alt="photoprofile"
+            />
+            <h2 id="amel">Amel BONNEVIE</h2>
+            <p class="ligne-p">
+              Age : 34 ans <br />
+              Développeur Web <br />
+              Avignon <br />
+              <span>
+                La tortue est ectotherme (ou à sang froid) et ne peut réguler
+                elle-même la température de son corps. Voilà pourquoi elle a
+                besoin d’un bon bain de soleil pour se réchauffer, et doit
+                plonger dans l’eau ou la boue pour se rafraîchir.</span
+              >
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="grid-container">
+            <img
+              class="profile"
+              src="./Photoprofil/quentin.png"
+              alt="photoprofile"
+            />
+            <h2>Quentin THUILLIER</h2>
+            <p class="ligne-p">
+              Age : 19 ans <br />
+              Développeur Web <br />
+              Reims <br />
+              <span
+                >Les chiens ont une ouïe très supérieure à celle des humains ;
+                par exemple, un chien peut entendre à 25 mètres un son que
+                l’humain ne peut entendre qu’à 4 mètres</span
+              >
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="grid-container">
+            <img
+              class="profile"
+              src="./Photoprofil/pierre.png"
+              alt="photoprofile"
+            />
+            <h2>Pierre DELAROCQUE</h2>
+            <p class="ligne-p">
+              Age : 36 ans <br />
+              Developpeur Web <br />
+              Tours <br />
+              <span
+                >Les chiens ont un minimum de 18 muscles par oreille, c’est ce
+                qui leur permet de les bouger individuellement</span
+              >
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="grid-container">
+            <img
+              class="profile"
+              src="./Photoprofil/megane.png"
+              alt="photoprofile"
+            />
+            <h2>Mégane AUTHEMAYOU</h2>
+            <p class="ligne-p">
+              Age : 30 ans <br />
+              Développeur Web <br />
+              Toulouse <br />
+              <strong
+                >Les poils de chien poussent bien plus vite que les cheveux des
+                humains : il faut environ 3 mois pour que que le pelage se
+                renouvelle complètement alors qu’un cheveu humain ne pousse que
+                d’un centimètre par mois en moyenne</strong
+              >.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>&copy wilders 2024 Equipe STACKQUAMP</p>
+      <p>créée par</p>
+      <p class="cree">
+        Amel BONNEVIE, Quentin THUILLIER, Pierre DELAROCQUE, Mégane AUTHEMAYOU
+      </p>
+    </footer>
+    <script src="./index.js"></script>
   </body>
 </html>

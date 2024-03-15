@@ -14,14 +14,24 @@
           src="./assets/logo_stackquamp.png"
           alt="logo StackQamp"
       /></a>
-      <nav>
+
+      <nav id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">x</a>
         <ul>
           <li><a href="./index.html">Accueil</a></li>
-          <li><a href="./jeu.html" id="jeu-link">Jeu</a></li>
+          <li><a href="./jeu.html">Jeu</a></li>
           <li><a href="./regles.html">Régle</a></li>
           <li><a href="./credit.html">Crédit</a></li>
         </ul>
       </nav>
+
+      <a href="#" id="openBtn">
+        <span class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
     </header>
     <main>
       <div class="topmain">
@@ -70,7 +80,7 @@
     <audio id="bonusSound5" src="sound/BILLIE22.mp3"></audio>
 
     <script src="script.js"></script>
-
+    <script src="index.js"></script>
     <div id="volumeSliderContainer">
       <img src="img/songactive.png" alt="Volume Icon" id="volumeIcon" />
       <input
@@ -85,7 +95,7 @@
 
     <div id="popup" class="popup">
       <div class="popup-content">
-        <span class="close" onclick="closePopup()">&times;</span>
+        <span class="closepopup" onclick="closePopup()">&times;</span>
         <p class="textpop">
           <strong>AVERTISSEMENT</strong> : Ce jeu peut contenir des effets
           visuels clignotants qui peuvent déclencher des crises d'épilepsie chez
@@ -99,11 +109,13 @@
     </div>
 
     <footer>
-      <p>&copy wilders 2024</p>
-      <p>
-        créée par Amel BONNEVIE, Quentin THUILLIER, Pierre DELAROCQUE, Mégane
-        AUTHEMAYOU
-      </p>
+      <div class="foot">
+        <p>&copy wilders 2024</p>
+        <p class="cree">
+          créée par Amel BONNEVIE, Quentin THUILLIER, Pierre DELAROCQUE, Mégane
+          AUTHEMAYOU
+        </p>
+      </div>
     </footer>
   </body>
 </html>

@@ -1,48 +1,195 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fef9d8;
+:root {
+  --color-background-page: #fef9d8;
+  --color-background-header-footer: rgba(217, 140, 79, 1);
+  --color-text-ul: rgba(236, 199, 70, 1);
+  --color-tilte: rgba(155, 51, 86, 1);
+}
+
+.sidenav {
+  height: 100%;
+  width: 15.5rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -15.5rem;
+  background-color: #e8e8e8;
+  padding-top: 3.7rem;
+  transition: left 0.5s ease;
+}
+
+p {
   margin: 0;
 }
+
+/* Sidenav menu links */
+.sidenav {
+  a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--color-text-ul);
+    display: block;
+    transition: 0.3s;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+      1px 1px 0 black;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+.pan {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 800px;
+  color: black;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.score {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 800px;
+  color: black;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidenav a:hover {
+  color: var(--color-background-header-footer);
+  cursor: pointer;
+}
+
+/* Active class */
+.sidenav.active {
+  left: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  font-size: 2.5rem;
+}
+
+/* Icône burger */
+
+.burger-icon {
+  margin-right: 4.5rem;
+
+  span {
+    display: block;
+    width: 3rem;
+    height: 4px;
+    background-color: var(--color-text-ul);
+    border-radius: 2rem;
+    box-shadow: 0rem 0rem 0.5rem black;
+    margin: 6px 0;
+  }
+}
+
+/* Media queries burger menu */
+
+@media screen and (min-width: 768px) {
+  .sidenav {
+    height: auto;
+    width: auto;
+    position: static;
+    z-index: 1;
+    top: auto;
+    left: auto;
+    background-color: var(--color-background-header-footer);
+    padding-top: 0;
+    transition: auto;
+    font-size: 4rem;
+  }
+
+  .sidenav a,
+  ul,
+  li {
+    display: inline;
+    margin-right: 1rem;
+  }
+
+  #closeBtn,
+  #openBtn {
+    display: none;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: var(--color-tilte);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000, 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 80px;
+  font-weight: 800;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+header,
+footer {
+  background-color: var(--color-background-header-footer);
+}
+
+.foot {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1;
+  color: var(--color-text-ul);
+  text-shadow: black -1px 0.5px, black -1px 0.5px, black -1px 0.5px;
+  height: 60px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    font-size: 1rem;
+  }
+}
+
+/* BODY */
+
+body {
+  margin: 0;
+  justify-content: space-between;
+  background-color: var(--color-background-page);
+}
+
+/*  HEADER */
 
 header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  background-color: #d98c4f;
-  width: auto;
-  height: 150px;
-  margin: 0;
-  padding: 0px 0 0 0;
-}
+  height: 10rem;
 
-.imghaut {
-  width: 180px;
-  height: 170px;
-  padding: 0 0 0 50px;
-}
+  img {
+    width: 10rem;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  text-decoration: none;
-  margin-right: 30px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  text-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
-  font-weight: bold;
-}
-
-nav {
-  padding: 30px;
-  font-size: 30px;
-}
-
-li a {
-  text-decoration: none;
-  color: #ecc746;
+  @media screen and (min-width: 768px) {
+    header {
+      justify-content: space-around;
+    }
+    img {
+      width: 20rem;
+    }
+  }
 }
 
 .Pan {
@@ -333,20 +480,6 @@ button.enabled-animation {
   margin-right: 10px;
 }
 
-footer,
-p {
-  background-color: #d98c4f;
-  margin: 0;
-  height: 50px;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 10px 0px 10px;
-}
-
 .popup {
   display: none;
   position: fixed;
@@ -367,10 +500,10 @@ footer {
   color: #fff;
   padding: 20px;
   border-radius: 10px;
-  height: 370px;
+  height: 500px;
 }
 
-.close {
+.closepopup {
   color: #fff;
   position: absolute;
   top: 10px;
