@@ -5,8 +5,12 @@
   --color-background-header-footer: rgba(217, 140, 79, 1);
   --color-text-ul: rgba(236, 199, 70, 1);
   --color-tilte: rgba(155, 51, 86, 1);
+  font-family: "montserrat", sans-serif;
 }
 
+.ligne-p {
+  font-family: "montserrat", sans-serif;
+}
 /* ACCUEIL */
 
 .accueiltitle {
@@ -16,7 +20,7 @@
 }
 
 .imgaccueil {
-  width: 60%;
+  width: 1fr;
   height: auto;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -33,9 +37,9 @@
   background-color: #9b3356;
   color: #fef9d8;
   font-weight: bold;
-  font-size: 100px;
-  width: 500px;
-  height: 120px;
+  font-size: 6.25rem;
+  width: 30rem;
+  height: 7.5rem;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -355,7 +359,6 @@ h2 {
   font-size: 150%;
   color: var(--color-background-page);
   font-weight: 800;
-  /*text-shadow: -1px -1px 0 #000, 1px 1px 0 #000, 2px 2px 4px rgba(0, 0, 0, 0.5);*/
 }
 
 .card p {
@@ -363,15 +366,9 @@ h2 {
 }
 
 ul {
-  /*text-align: center;
-  text-indent: 0em;
-  text-transform: none;*/
   color: var(--color-background-page);
+  word-spacing: 2px;
 }
-
-/*li {
-  list-style-type: decimal;
-}*/
 
 /* FOOTER */
 

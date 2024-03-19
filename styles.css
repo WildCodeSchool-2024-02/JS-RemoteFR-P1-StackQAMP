@@ -3,6 +3,7 @@
   --color-background-header-footer: rgba(217, 140, 79, 1);
   --color-text-ul: rgba(236, 199, 70, 1);
   --color-tilte: rgba(155, 51, 86, 1);
+  font-family: "montserrat", sans-serif;
 }
 
 .sidenav {
