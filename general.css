@@ -11,10 +11,11 @@
 .ligne-p {
   font-family: "montserrat", sans-serif;
 }
+
 /* ACCUEIL */
 
 .accueiltitle {
-  font-size: 100px;
+  font-size: 4rem;
   font-weight: bold;
   margin: 67px 0 0 0;
 }
@@ -67,6 +68,9 @@ html {
 header,
 footer {
   background-color: var(--color-background-header-footer);
+  box-shadow: inset 0 -3em 3em var(--color-background-header-footer),
+    0 0 0 2px var(--color-background-header-footer),
+    0.3em 0.3em 1em var(--color-background-header-footer);
 }
 
 /* BODY */
