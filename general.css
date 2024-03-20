@@ -78,7 +78,6 @@ button:hover {
 /*  GENERAL */
 
 * {
-* {
   box-sizing: border-box;
   line-height: 1.5;
 }
@@ -206,14 +205,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
   }
-<<<<<<< HEAD
-=======
-  .navflex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
->>>>>>> ff56c4bc9e1acadcda316882d8f62622f88379aa
   .sidenav {
     height: 7.8rem;
     width: 7.8rem;
@@ -461,8 +452,6 @@ footer {
   }
 }
 
-.cree {
-  margin: 0;
 .cree {
   margin: 0;
 }
