@@ -61,7 +61,7 @@ Commencez à cliquer sur les pancakes et à profiter du jeu !
   - Mise à jour du fichier styles.css.
   - Mise à jour du fichier README.md.
  
-  - **Version 1.2.5 (V1.2.5) :**
+- **Version 1.2.5 (V1.2.5) :**
   - Mise à jour du style pour le texte dans les popups.
   - Réglage de bugs et ajout de la commande giveMoney.
   - Réglage de bugs et ajout du prix réel.
