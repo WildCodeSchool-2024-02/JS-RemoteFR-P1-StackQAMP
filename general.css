@@ -105,6 +105,7 @@ body {
   margin: 0;
   justify-content: space-between;
   background-color: var(--color-background-page);
+  background: linear-gradient(to bottom, #d98c4f, #c56cc5);
 
   margin: 0;
 }
