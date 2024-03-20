@@ -27,6 +27,8 @@ Pan' Click est un jeu amusant et addictif où vous pouvez satisfaire votre appé
 2. Ouvrez le fichier `index.html` dans votre navigateur web.
 3. Commencez à cliquer sur les pancakes et à profiter du jeu !
 
+Le jeu est également disponible en ligne sur [ce lien](https://wildcodeschool-2024-02.github.io/JS-RemoteFR-P1-StackQAMP/) !
+
 Si vous avez des questions ou des suggestions, n'hésitez pas à les partager !
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
