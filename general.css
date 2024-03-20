@@ -77,7 +77,8 @@ button:hover {
 
 /*  GENERAL */
 
-html {
+* {
+* {
   box-sizing: border-box;
   line-height: 1.5;
 }
@@ -205,6 +206,14 @@ header {
     flex-direction: row;
     justify-content: space-between;
   }
+<<<<<<< HEAD
+=======
+  .navflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+>>>>>>> ff56c4bc9e1acadcda316882d8f62622f88379aa
   .sidenav {
     height: 7.8rem;
     width: 7.8rem;
@@ -220,7 +229,6 @@ header {
   .sidenav a,
   ul,
   li {
-    display: inline;
     margin-right: 1rem;
   }
 
@@ -265,6 +273,7 @@ section {
   flex-direction: column;
   margin: auto;
   border-radius: 5px;
+  margin-bottom: 2rem;
 }
 
 .profile {
@@ -338,83 +347,122 @@ span {
     margin: 0;
     width: 85%;
   }
+}
+/* Page Règles*/
 
-  /* Page Règles*/
+.pancake-img {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  margin: 2em;
+}
+.pancake-img:hover {
+  transform: scale(1.2);
+}
 
-  .pancake-img {
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-    margin: 2em;
-  }
-  .pancake-img:hover {
-    transform: scale(1.2);
-  }
+h1 {
+  font-size: 300%;
+  color: #9b3356;
+  font-weight: 800;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000, 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+h1 {
+  font-size: 300%;
+  color: #9b3356;
+  font-weight: 800;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000, 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
-  h1 {
-    font-size: 300%;
-    color: #9b3356;
-    font-weight: 800;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-      1px 1px 0 #000, 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
+.card {
+  width: 80%; /*1*/
+  margin: 0px auto; /*2*/
+  margin-bottom: 2rem;
+  background-color: var(--color-background-header-footer); /*3*/
+  box-shadow: 0px 5px 20px #999; /*4*/
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: inset 0 -3em 3em var(--color-background-header-footer),
+    0 0 0 2px var(--color-background-header-footer),
+    0.3em 0.3em 1em var(--color-background-header-footer);
+  flex-shrink: 5;
+}
+.card {
+  width: 80%; /*1*/
+  margin: 0px auto; /*2*/
+  margin-bottom: 2rem;
+  background-color: var(--color-background-header-footer); /*3*/
+  box-shadow: 0px 5px 20px #999; /*4*/
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: inset 0 -3em 3em var(--color-background-header-footer),
+    0 0 0 2px var(--color-background-header-footer),
+    0.3em 0.3em 1em var(--color-background-header-footer);
+  flex-shrink: 5;
+}
 
-  .card {
-    width: 80%; /*1*/
-    margin: 0px auto; /*2*/
-    margin-bottom: 2rem;
-    background-color: var(--color-background-header-footer); /*3*/
-    box-shadow: 0px 5px 20px #999; /*4*/
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    box-shadow: inset 0 -3em 3em var(--color-background-header-footer),
-      0 0 0 2px var(--color-background-header-footer),
-      0.3em 0.3em 1em var(--color-background-header-footer);
-    flex-shrink: 5;
-  }
+main h1 {
+  display: flex;
+  justify-content: center;
+}
+main h1 {
+  display: flex;
+  justify-content: center;
+}
 
-  main h1 {
-    display: flex;
-    justify-content: center;
-  }
+h2 {
+  padding: 1em;
+  font-weight: 800;
+  font-size: 150%;
+  color: var(--color-background-page);
+  font-weight: 800;
+}
 
-  h2 {
-    padding: 1em;
-    font-weight: 800;
-    font-size: 150%;
-    color: var(--color-background-page);
-    font-weight: 800;
-  }
+.card p {
+  margin: 0px;
+}
+.card p {
+  margin: 0px;
+}
 
-  .card p {
-    margin: 0px;
-  }
+ul {
+  color: var(--color-background-page);
+  word-spacing: 2px;
+}
+ul {
+  color: var(--color-background-page);
+  word-spacing: 2px;
+}
 
-  ul {
-    color: var(--color-background-page);
-    word-spacing: 2px;
-  }
+/* FOOTER */
+/* FOOTER */
 
-  /* FOOTER */
+footer {
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1;
+  color: var(--color-text-ul);
+  text-shadow: black -1px 0.5px, black -1px 0.5px, black -1px 0.5px;
+}
 
+@media screen and (min-width: 768px) {
   footer {
-    text-align: center;
-    font-size: 0.7rem;
-    line-height: 1;
-    color: var(--color-text-ul);
-    text-shadow: black -1px 0.5px, black -1px 0.5px, black -1px 0.5px;
+    font-size: 1rem;
   }
+}
+@media screen and (min-width: 768px) {
+  footer {
+    font-size: 1rem;
+  }
+}
 
-  @media screen and (min-width: 768px) {
-    footer {
-      font-size: 1rem;
-    }
-  }
-
-  .cree {
-    margin: 0;
-  }
+.cree {
+  margin: 0;
+.cree {
+  margin: 0;
 }
