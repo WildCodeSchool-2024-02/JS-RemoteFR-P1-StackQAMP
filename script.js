@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
   let multiplier = 1;
   let multiplierCost = 50;
   let autoclickCost = 20;
-  let bonusCost = 20;
-  let bonusCost2 = 20;
-  let bonusCost3 = 20;
-  let bonusCost4 = 20;
-  let bonusCost5 = 20;
-  let bonusCost6 = 20;
-  let bonusCost7 = 20;
+  let bonusCost = 5000;
+  let bonusCost2 = 15000;
+  let bonusCost3 = 25000;
+  let bonusCost4 = 50000;
+  let bonusCost5 = 100000;
+  let bonusCost6 = 250000;
+  let bonusCost7 = 1000000;
   let bonusActive = false;
   let bonusDuration = 30;
   let autoclickerActive = false;
@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", function () {
           clearInterval(interval);
           clearInterval(countdownInterval);
           bonusActive = false;
-          bonusButton2.textContent = "Bonus 2 - Cost: 20";
+          bonusButton2.textContent = "Bonus 2 - Cost: 15 000";
           bonusButton2.disabled = false;
           bonusButton2.classList.add("grow");
           clickImage.style.filter = "";
@@ -383,12 +383,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   bonusButton3.addEventListener("click", () => {
-    if (score >= 20) {
+    if (score >= 25000) {
       bonussound3.play();
-
-      score -= 20;
+      score -= 25000;
       updateScore();
-
       const hiddenElements = [
         multiplierButton,
         autoclickButton,
@@ -401,11 +399,9 @@ document.addEventListener("DOMContentLoaded", function () {
         bonusButton7,
         img,
       ];
-
       hiddenElements.forEach((element) => {
         element.style.display = "none";
       });
-
       const gifElement = document.createElement("img");
       gifElement.src = "gif/200w.gif";
       gifElement.style.position = "fixed";
@@ -414,21 +410,17 @@ document.addEventListener("DOMContentLoaded", function () {
       gifElement.style.transform = "translate(-50%, -50%)";
       document.body.appendChild(gifElement);
       all.style.animation = "rotate 2s linear infinite";
-
       all.classList.add("rainbow-image");
       all.classList.add("blinking");
-
       const rainbowAnimation = setInterval(() => {
         all.style.filter = `hue-rotate(${Math.floor(Math.random() * 360)}deg)`;
       }, 100);
-
       const scoreIncrement = 1500;
       const animationDuration = 30;
       const animationInterval = setInterval(() => {
         score += scoreIncrement;
         updateScore();
       }, 1000);
-
       setTimeout(() => {
         hiddenElements.forEach((element) => {
           element.style.display = "block";
@@ -438,19 +430,17 @@ document.addEventListener("DOMContentLoaded", function () {
           all.classList.remove("rainbow-image");
           all.classList.remove("blinking");
         });
-
         document.body.removeChild(gifElement);
-
         clearInterval(animationInterval);
       }, animationDuration * 1000);
     }
   });
 
   bonusButton4.addEventListener("click", () => {
-    if (score >= 20) {
+    if (score >= bonusCost4) {
       bonussound4.play();
 
-      score -= 20;
+      score -= bonusCost4;
       updateScore();
 
       all.classList.add("rainbow-image");
@@ -482,54 +472,55 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   bonusButton5.addEventListener("click", () => {
-    if (score >= bonusCost5 && !bonusActive) {
-      score -= bonusCost5;
-      bonusActive = true;
-      bonusButton5.disabled = true;
+    setTimeout(() => {
+      if (score >= bonusCost5 && !bonusActive) {
+        score -= bonusCost5;
+        bonusActive = true;
+        bonusButton5.disabled = true;
 
-      animateBonusButton(bonusButton5);
+        animateBonusButton(bonusButton5);
 
-      animateClickImage();
+        animateClickImage();
 
-      let bonusTimer = 30;
-      const bonusIncrement = 5000;
-      const interval = setInterval(() => {
-        bonusTimer--;
-        bonusButton5.textContent = `Broken (${bonusTimer}s)`;
+        let bonusTimer = 30;
+        const bonusIncrement = 5000;
+        const interval = setInterval(() => {
+          bonusTimer--;
+          bonusButton5.textContent = `Broken (${bonusTimer}s)`;
 
-        score += bonusIncrement;
-        updateScore();
+          score += bonusIncrement;
+          updateScore();
 
-        if (bonusTimer <= 0) {
-          clearInterval(interval);
-          bonusActive = false;
-          bonusButton5.textContent = "He is broken :/ - Cost: 20";
-          bonusButton5.disabled = false;
-          bonusButton5.classList.add("grow");
+          if (bonusTimer <= 0) {
+            clearInterval(interval);
+            bonusActive = false;
+            bonusButton5.textContent = "He is broken :/ - Cost: 100 000";
+            bonusButton5.disabled = false;
+            bonusButton5.classList.add("grow");
 
-          stopButtonAnimation(bonusButton5);
+            stopButtonAnimation(bonusButton5);
 
-          document.documentElement.classList.remove("black-and-white");
-          document.body.classList.remove("dripping-effect");
+            document.documentElement.classList.remove("black-and-white");
+            document.body.classList.remove("dripping-effect");
 
-          document.documentElement.classList.remove("clickImage");
+            document.documentElement.classList.remove("clickImage");
 
-          clickImage.style.transform = "scale(1)";
-        } else {
-          const scale = 1 - bonusTimer / 30;
-          clickImage.style.transform = `scale(${scale})`;
-        }
-      }, 1000);
+            clickImage.style.transform = "scale(1)";
+          } else {
+            const scale = 1 - bonusTimer / 30;
+            clickImage.style.transform = `scale(${scale})`;
+          }
+        }, 1000);
 
-      document.documentElement.classList.add("black-and-white");
-      document.body.classList.add("dripping-effect");
+        document.documentElement.classList.add("black-and-white");
+        document.body.classList.add("dripping-effect");
 
-      bonusSound5.play();
-    }
-    purchaseSound.currentTime = 0;
-    purchaseSound.play();
+        bonusSound5.play();
+      }
+      purchaseSound.currentTime = 0;
+      purchaseSound.play();
+    }, 5000);
   });
-
   function animateClickImage() {
     const clickImage = document.getElementById("click");
 
@@ -564,54 +555,54 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   bonusButton6.addEventListener("click", () => {
-    if (score >= bonusCost6 && !bonusActive) {
-      score -= bonusCost6;
-      bonusActive = true;
-      bonusButton6.disabled = true;
-      enableButtonAnimation(bonusButton6);
+    setTimeout(() => {
+      if (score >= bonusCost6 && !bonusActive) {
+        score -= bonusCost6;
+        bonusActive = true;
+        bonusButton6.disabled = true;
+        enableButtonAnimation(bonusButton6);
 
-      const videoElement = document.createElement("video");
-      videoElement.src = "video/BEAR.mp4";
-      videoElement.autoplay = true;
-      videoElement.controls = false;
-      videoElement.controlsList = "nodownload";
-      videoElement.style.width = "100%";
-      videoElement.style.height = "100%";
-      videoElement.style.position = "fixed";
-      videoElement.style.top = "0";
-      videoElement.style.left = "0";
-      videoElement.style.zIndex = "9999";
+        const videoElement = document.createElement("video");
+        videoElement.src = "video/BEAR.mp4";
+        videoElement.autoplay = true;
+        videoElement.controls = false;
+        videoElement.controlsList = "nodownload";
+        videoElement.style.width = "100%";
+        videoElement.style.height = "100%";
+        videoElement.style.position = "fixed";
+        videoElement.style.top = "0";
+        videoElement.style.left = "0";
+        videoElement.style.zIndex = "9999";
 
-      // Ajouter un gestionnaire d'événement pour retirer la vidéo à la fin de la lecture
-      videoElement.addEventListener("ended", () => {
-        document.body.removeChild(videoElement);
-      });
-
-      document.body.appendChild(videoElement);
-
-      let bonusTimer = bonusDuration;
-      const interval = setInterval(() => {
-        bonusTimer--;
-        bonusButton6.textContent = `Bonus 6 (${bonusTimer}s)`;
-
-        score += bonusIncrement;
-        updateScore();
-
-        if (bonusTimer <= 0) {
-          clearInterval(interval);
-          bonusActive = false;
-          bonusButton6.textContent = "LIKE A BEAR | Cost: 250 000";
-          bonusButton6.disabled = false;
-
-          stopButtonAnimation(bonusButton6);
-
-          // Retirer la vidéo de la page
+        videoElement.addEventListener("ended", () => {
           document.body.removeChild(videoElement);
-        }
-      }, 1000);
-    }
-    purchaseSound.currentTime = 0;
-    purchaseSound.play();
+        });
+
+        document.body.appendChild(videoElement);
+
+        let bonusTimer = bonusDuration;
+        const interval = setInterval(() => {
+          bonusTimer--;
+          bonusButton6.textContent = `Bonus 6 (${bonusTimer}s)`;
+
+          score += bonusIncrement;
+          updateScore();
+
+          if (bonusTimer <= 0) {
+            clearInterval(interval);
+            bonusActive = false;
+            bonusButton6.textContent = "LIKE A BEAR | Cost: 250 000";
+            bonusButton6.disabled = false;
+
+            stopButtonAnimation(bonusButton6);
+
+            document.body.removeChild(videoElement);
+          }
+        }, 1000);
+      }
+      purchaseSound.currentTime = 0;
+      purchaseSound.play();
+    }, 5000);
   });
 
   bonusButton7.addEventListener("click", () => {
@@ -642,6 +633,15 @@ document.addEventListener("DOMContentLoaded", function () {
     purchaseSound.currentTime = 0;
     purchaseSound.play();
   });
+
+  function giveMoney(amount) {
+    score += amount;
+    updateScore();
+    console.log("Tu t'es donné :", amount, "PAN");
+  }
+  // Vous pouvez exécuter cette commande dans la console du navigateur
+  // Par exemple : giveMoney(10000) donnera 10000 à votre score
+  window.giveMoney = giveMoney;
 
   updateScore();
   updateMultiplier();
