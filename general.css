@@ -5,9 +5,7 @@
 
 :root {
   --background: linear-gradient(to bottom, #d98c4f, #c56cc5);
-  --color-background-header-footer: rgba(217, 140, 79, 1);
   --color-text-ul: rgba(236, 199, 70, 1);
-  --color-tilte: rgba(155, 51, 86, 1);
 }
 
 .ligne-p {
@@ -91,22 +89,12 @@ button:hover {
   line-height: 1.5;
 }
 
-footer {
-  /*background-color: var(--color-background-header-footer);*/
-  background: linear-gradient(to bottom, #c56cc5, #4b0082);
-  /* box-shadow: inset 0 -3em 3em var(--color-background-header-footer),
-    0 0 0 2px var(--color-background-header-footer),
-    0.3em 0.3em 1em var(--color-background-header-footer);*/
-}
-
 /* BODY */
 
 body {
   margin: 0;
   justify-content: space-between;
-  background-color: var(--color-background-page);
-  background: linear-gradient(to bottom, #d98c4f, #c56cc5);
-
+  background: var(--background);
   margin: 0;
 }
 
@@ -177,7 +165,6 @@ header {
 }
 
 .sidenav a:hover {
-  color: var(--color-background-header-footer);
   cursor: pointer;
 }
 
@@ -243,7 +230,6 @@ header {
 
 h1 {
   text-align: center;
-  color: var(--color-tilte);
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000, 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 80px;
@@ -289,10 +275,6 @@ section {
   transform: scale(1.2);
 }
 
-h2 {
-  color: var(--color-tilte);
-}
-
 .ligne-p {
   border-radius: 20px;
   padding: 10px;
@@ -301,10 +283,8 @@ h2 {
   text-align: center;
   text-indent: 0em;
   text-transform: none;
-  color: var(--color-background-page);
   ::before {
     content: "\275D";
-    color: var(--color-background-page);
     font-size: 2em;
     line-height: 0;
     margin-right: -0.4em;
@@ -337,6 +317,7 @@ span {
     width: 85%;
   }
 }
+
 /* Page Règles*/
 
 .pancake-img {
@@ -347,13 +328,13 @@ span {
   transition: all 0.2s;
   margin: 2em;
 }
+
 .pancake-img:hover {
   transform: scale(1.2);
 }
 
 h1 {
   font-size: 300%;
-  color: #9b3356;
   font-weight: 800;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000, 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -378,7 +359,6 @@ h2 {
   padding: 1em;
   font-weight: 800;
   font-size: 150%;
-  color: var(--color-background-page);
   font-weight: 800;
   font-family: "madimi one";
 }
@@ -388,7 +368,6 @@ h2 {
 }
 
 ul {
-  color: var(--color-background-page);
   word-spacing: 2px;
   font-family: "madimi one";
 }
@@ -399,9 +378,9 @@ footer {
   text-align: center;
   font-size: 0.7rem;
   line-height: 1;
-  background-color: linear-gradient(to bottom, #4b0082, #d98c4f);
   color: black;
   font-family: "madimi one";
+  background: linear-gradient(to bottom, #c56cc5, #4b0082);
 }
 
 @media screen and (min-width: 768px) {
