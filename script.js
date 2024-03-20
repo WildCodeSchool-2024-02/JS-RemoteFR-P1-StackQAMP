@@ -584,7 +584,6 @@ document.addEventListener("DOMContentLoaded", function () {
         videoElement.style.left = "0";
         videoElement.style.zIndex = "9999";
 
-        // Ajouter un gestionnaire d'événement pour retirer la vidéo à la fin de la lecture
         videoElement.addEventListener("ended", () => {
           document.body.removeChild(videoElement);
         });
@@ -607,14 +606,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             stopButtonAnimation(bonusButton6);
 
-            // Retirer la vidéo de la page
             document.body.removeChild(videoElement);
           }
         }, 1000);
       }
       purchaseSound.currentTime = 0;
       purchaseSound.play();
-    }, 5000); // Définir un délai de 5000 millisecondes (5 secondes)
+    }, 5000);
   });
 
   bonusButton7.addEventListener("click", () => {
