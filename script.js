@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
   let multiplier = 1;
   let multiplierCost = 50;
   let autoclickCost = 20;
-  let bonusCost = 20;
-  let bonusCost2 = 20;
-  let bonusCost3 = 20;
-  let bonusCost4 = 20;
-  let bonusCost5 = 20;
-  let bonusCost6 = 20;
-  let bonusCost7 = 20;
+  let bonusCost = 5000;
+  let bonusCost2 = 15000;
+  let bonusCost3 = 25000;
+  let bonusCost4 = 50000;
+  let bonusCost5 = 100000;
+  let bonusCost6 = 250000;
+  let bonusCost7 = 1000000;
   let bonusActive = false;
   let bonusDuration = 30;
   let autoclickerActive = false;
@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", function () {
           clearInterval(interval);
           clearInterval(countdownInterval);
           bonusActive = false;
-          bonusButton2.textContent = "Bonus 2 - Cost: 20";
+          bonusButton2.textContent = "Bonus 2 - Cost: 15 000";
           bonusButton2.disabled = false;
           bonusButton2.classList.add("grow");
           clickImage.style.filter = "";
@@ -383,10 +383,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   bonusButton3.addEventListener("click", () => {
-    if (score >= 20) {
+    if (score >= bonusCost3) {
       bonussound3.play();
-
-      score -= 20;
+      score -= bonusCost3;
       updateScore();
 
       const hiddenElements = [
@@ -413,44 +412,22 @@ document.addEventListener("DOMContentLoaded", function () {
       gifElement.style.left = "50%";
       gifElement.style.transform = "translate(-50%, -50%)";
       document.body.appendChild(gifElement);
-      all.style.animation = "rotate 2s linear infinite";
-
-      all.classList.add("rainbow-image");
-      all.classList.add("blinking");
-
-      const rainbowAnimation = setInterval(() => {
-        all.style.filter = `hue-rotate(${Math.floor(Math.random() * 360)}deg)`;
-      }, 100);
-
-      const scoreIncrement = 1500;
-      const animationDuration = 30;
-      const animationInterval = setInterval(() => {
-        score += scoreIncrement;
-        updateScore();
-      }, 1000);
 
       setTimeout(() => {
         hiddenElements.forEach((element) => {
           element.style.display = "block";
-          all.style.animation = "none";
-          clearInterval(rainbowAnimation);
-          all.style.filter = "";
-          all.classList.remove("rainbow-image");
-          all.classList.remove("blinking");
         });
 
         document.body.removeChild(gifElement);
-
-        clearInterval(animationInterval);
-      }, animationDuration * 1000);
+      }, 5000);
     }
   });
 
   bonusButton4.addEventListener("click", () => {
-    if (score >= 20) {
+    if (score >= bonusCost4) {
       bonussound4.play();
 
-      score -= 20;
+      score -= bonusCost4;
       updateScore();
 
       all.classList.add("rainbow-image");
@@ -504,7 +481,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (bonusTimer <= 0) {
             clearInterval(interval);
             bonusActive = false;
-            bonusButton5.textContent = "He is broken :/ - Cost: 20";
+            bonusButton5.textContent = "He is broken :/ - Cost: 100 000";
             bonusButton5.disabled = false;
             bonusButton5.classList.add("grow");
 
