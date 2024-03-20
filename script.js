@@ -383,11 +383,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   bonusButton3.addEventListener("click", () => {
-    if (score >= bonusCost3) {
+    if (score >= 25000) {
       bonussound3.play();
-      score -= bonusCost3;
+      score -= 25000;
       updateScore();
-
       const hiddenElements = [
         multiplierButton,
         autoclickButton,
@@ -400,11 +399,9 @@ document.addEventListener("DOMContentLoaded", function () {
         bonusButton7,
         img,
       ];
-
       hiddenElements.forEach((element) => {
         element.style.display = "none";
       });
-
       const gifElement = document.createElement("img");
       gifElement.src = "gif/200w.gif";
       gifElement.style.position = "fixed";
@@ -412,14 +409,30 @@ document.addEventListener("DOMContentLoaded", function () {
       gifElement.style.left = "50%";
       gifElement.style.transform = "translate(-50%, -50%)";
       document.body.appendChild(gifElement);
-
+      all.style.animation = "rotate 2s linear infinite";
+      all.classList.add("rainbow-image");
+      all.classList.add("blinking");
+      const rainbowAnimation = setInterval(() => {
+        all.style.filter = `hue-rotate(${Math.floor(Math.random() * 360)}deg)`;
+      }, 100);
+      const scoreIncrement = 1500;
+      const animationDuration = 30;
+      const animationInterval = setInterval(() => {
+        score += scoreIncrement;
+        updateScore();
+      }, 1000);
       setTimeout(() => {
         hiddenElements.forEach((element) => {
           element.style.display = "block";
+          all.style.animation = "none";
+          clearInterval(rainbowAnimation);
+          all.style.filter = "";
+          all.classList.remove("rainbow-image");
+          all.classList.remove("blinking");
         });
-
         document.body.removeChild(gifElement);
-      }, 5000);
+        clearInterval(animationInterval);
+      }, animationDuration * 1000);
     }
   });
 
@@ -620,6 +633,15 @@ document.addEventListener("DOMContentLoaded", function () {
     purchaseSound.currentTime = 0;
     purchaseSound.play();
   });
+
+  function giveMoney(amount) {
+    score += amount;
+    updateScore();
+    console.log("Tu t'es donné :", amount, "PAN");
+  }
+  // Vous pouvez exécuter cette commande dans la console du navigateur
+  // Par exemple : giveMoney(10000) donnera 10000 à votre score
+  window.giveMoney = giveMoney;
 
   updateScore();
   updateMultiplier();
