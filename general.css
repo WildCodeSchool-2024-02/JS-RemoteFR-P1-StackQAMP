@@ -122,15 +122,16 @@ header {
 
 /* Sidenav menu */
 .sidenav {
-  height: 100%;
-  width: 15.5rem;
+  height: 6.8rem;
+  width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
-  left: -15.5rem;
+  left: -50rem;
   background-color: #e8e8e8;
   padding-top: 3.7rem;
   transition: left 0.5s ease;
+  background:var(--color-background-header-footer);
 }
 
 /* Sidenav menu links */
@@ -138,10 +139,10 @@ header {
   a {
     padding: 8px 8px 8px 8px;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--color-text-ul);
     text-shadow: black -1px 0.5px, black -1px 0.5px, black -1px 0.5px;
-    display: block;
+    display: inline;
     transition: 0.3s;
     font-weight: bold;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
@@ -150,6 +151,11 @@ header {
 
   ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
   }
 }
 
@@ -190,14 +196,18 @@ header {
 /* Media queries burger menu */
 
 @media screen and (min-width: 768px) {
+.navflex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
   .sidenav {
-    height: auto;
-    width: auto;
+    height: 7.8rem;
+    width: 7.8rem;
     position: static;
     z-index: 1;
     top: auto;
     left: auto;
-    background-color: var(--color-background-header-footer);
     padding-top: 0;
     transition: auto;
     font-size: 4rem;
