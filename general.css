@@ -14,10 +14,21 @@
   font-weight: bold;
   margin: 67px 0 0 0;
 }
+@media screen and (max-width: 767px) {
+  .accueiltitle {
+    font-size: 80px;
+  }
+}
 
 .imgaccueil {
   width: 650px;
   height: auto;
+}
+@media screen and (max-width: 767px) {
+  .imgaccueil {
+    width: 450px;
+    height: auto;
+  }
 }
 
 .buttonjouer {
@@ -32,6 +43,12 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin: 0 0 120px 0;
+}
+@media screen and (max-width: 767px) {
+  .buttonjouer {
+    width: 300px;
+    font-size: 80px;
+  }
 }
 
 button:hover {
