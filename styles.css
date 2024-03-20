@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Honk&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
 
 :root {
-  -background: linear-gradient(to bottom, #D98C4F, #C56CC5);
+  -background: linear-gradient(to bottom, #d98c4f, #c56cc5);
   --color-text-ul: rgba(236, 199, 70, 1);
   --color-tilte: rgba(155, 51, 86, 1);
   font-family: "montserrat", sans-serif;
@@ -16,7 +16,7 @@
 }
 
 footer {
-  background: linear-gradient(to bottom, #C56CC5, #4B0082);
+  background: linear-gradient(to bottom, #c56cc5, #4b0082);
 }
 
 /* BODY */
@@ -62,7 +62,7 @@ header {
   background-color: #e8e8e8;
   padding-top: 3.7rem;
   transition: left 0.5s ease;
-  background: linear-gradient(to bottom, #4B0082, #D98C4F);
+  background: linear-gradient(to bottom, #4b0082, #d98c4f);
 }
 
 /* Sidenav menu links */
@@ -132,19 +132,19 @@ header {
     flex-direction: row;
     justify-content: space-between;
   }
-    .sidenav {
-      height: auto;
-      width: auto;
-      position: static;
-      z-index: 1;
-      top: auto;
-      left: auto;
-      background-color: var(--color-background-header-footer);
-      padding-top: 0;
-      transition: auto;
-      font-size: 4rem;
-      background: none;
-    }
+  .sidenav {
+    height: auto;
+    width: auto;
+    position: static;
+    z-index: 1;
+    top: auto;
+    left: auto;
+    background-color: var(--color-background-header-footer);
+    padding-top: 0;
+    transition: auto;
+    font-size: 4rem;
+    background: none;
+  }
 
   .sidenav a,
   ul,
@@ -191,8 +191,6 @@ html {
   line-height: 1.5;
 }
 
-
-
 /* BODY */
 
 body {
@@ -208,7 +206,7 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 10rem;
-  background: linear-gradient(to bottom, #4B0082, #D98C4F);
+  background: linear-gradient(to bottom, #4b0082, #d98c4f);
   img {
     width: 10rem;
   }
@@ -346,7 +344,8 @@ button.disabled:hover {
   #etc5 {
     grid-column: span 2;
     width: 20.5rem;
-}}
+  }
+}
 
 @media screen and (max-width: 767px) {
   button.disabled {
@@ -578,9 +577,7 @@ button.enabled-animation {
 
 #volumeSliderContainer {
   display: flex;
-  align-items: center;
   justify-content: center;
-  align-items: stretch;
   padding: 10px 0 200px 0;
 }
 
