@@ -286,7 +286,7 @@ input[type="text"] {
   background-color: #d98c4f;
   margin: 0 120px 0 120px;
   border-radius: 5px;
-  height: 1300px;
+  height: 1256px;
   box-shadow: inset 0 -3em 3em var(--color-background-header-footer),
     0 0 0 2px var(--color-background-header-footer),
     0.3em 0.3em 1em var(--color-background-header-footer);
