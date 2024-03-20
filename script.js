@@ -482,54 +482,55 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   bonusButton5.addEventListener("click", () => {
-    if (score >= bonusCost5 && !bonusActive) {
-      score -= bonusCost5;
-      bonusActive = true;
-      bonusButton5.disabled = true;
+    setTimeout(() => {
+      if (score >= bonusCost5 && !bonusActive) {
+        score -= bonusCost5;
+        bonusActive = true;
+        bonusButton5.disabled = true;
 
-      animateBonusButton(bonusButton5);
+        animateBonusButton(bonusButton5);
 
-      animateClickImage();
+        animateClickImage();
 
-      let bonusTimer = 30;
-      const bonusIncrement = 5000;
-      const interval = setInterval(() => {
-        bonusTimer--;
-        bonusButton5.textContent = `Broken (${bonusTimer}s)`;
+        let bonusTimer = 30;
+        const bonusIncrement = 5000;
+        const interval = setInterval(() => {
+          bonusTimer--;
+          bonusButton5.textContent = `Broken (${bonusTimer}s)`;
 
-        score += bonusIncrement;
-        updateScore();
+          score += bonusIncrement;
+          updateScore();
 
-        if (bonusTimer <= 0) {
-          clearInterval(interval);
-          bonusActive = false;
-          bonusButton5.textContent = "He is broken :/ - Cost: 20";
-          bonusButton5.disabled = false;
-          bonusButton5.classList.add("grow");
+          if (bonusTimer <= 0) {
+            clearInterval(interval);
+            bonusActive = false;
+            bonusButton5.textContent = "He is broken :/ - Cost: 20";
+            bonusButton5.disabled = false;
+            bonusButton5.classList.add("grow");
 
-          stopButtonAnimation(bonusButton5);
+            stopButtonAnimation(bonusButton5);
 
-          document.documentElement.classList.remove("black-and-white");
-          document.body.classList.remove("dripping-effect");
+            document.documentElement.classList.remove("black-and-white");
+            document.body.classList.remove("dripping-effect");
 
-          document.documentElement.classList.remove("clickImage");
+            document.documentElement.classList.remove("clickImage");
 
-          clickImage.style.transform = "scale(1)";
-        } else {
-          const scale = 1 - bonusTimer / 30;
-          clickImage.style.transform = `scale(${scale})`;
-        }
-      }, 1000);
+            clickImage.style.transform = "scale(1)";
+          } else {
+            const scale = 1 - bonusTimer / 30;
+            clickImage.style.transform = `scale(${scale})`;
+          }
+        }, 1000);
 
-      document.documentElement.classList.add("black-and-white");
-      document.body.classList.add("dripping-effect");
+        document.documentElement.classList.add("black-and-white");
+        document.body.classList.add("dripping-effect");
 
-      bonusSound5.play();
-    }
-    purchaseSound.currentTime = 0;
-    purchaseSound.play();
+        bonusSound5.play();
+      }
+      purchaseSound.currentTime = 0;
+      purchaseSound.play();
+    }, 5000);
   });
-
   function animateClickImage() {
     const clickImage = document.getElementById("click");
 
@@ -564,54 +565,56 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   bonusButton6.addEventListener("click", () => {
-    if (score >= bonusCost6 && !bonusActive) {
-      score -= bonusCost6;
-      bonusActive = true;
-      bonusButton6.disabled = true;
-      enableButtonAnimation(bonusButton6);
+    setTimeout(() => {
+      if (score >= bonusCost6 && !bonusActive) {
+        score -= bonusCost6;
+        bonusActive = true;
+        bonusButton6.disabled = true;
+        enableButtonAnimation(bonusButton6);
 
-      const videoElement = document.createElement("video");
-      videoElement.src = "video/BEAR.mp4";
-      videoElement.autoplay = true;
-      videoElement.controls = false;
-      videoElement.controlsList = "nodownload";
-      videoElement.style.width = "100%";
-      videoElement.style.height = "100%";
-      videoElement.style.position = "fixed";
-      videoElement.style.top = "0";
-      videoElement.style.left = "0";
-      videoElement.style.zIndex = "9999";
+        const videoElement = document.createElement("video");
+        videoElement.src = "video/BEAR.mp4";
+        videoElement.autoplay = true;
+        videoElement.controls = false;
+        videoElement.controlsList = "nodownload";
+        videoElement.style.width = "100%";
+        videoElement.style.height = "100%";
+        videoElement.style.position = "fixed";
+        videoElement.style.top = "0";
+        videoElement.style.left = "0";
+        videoElement.style.zIndex = "9999";
 
-      // Ajouter un gestionnaire d'événement pour retirer la vidéo à la fin de la lecture
-      videoElement.addEventListener("ended", () => {
-        document.body.removeChild(videoElement);
-      });
-
-      document.body.appendChild(videoElement);
-
-      let bonusTimer = bonusDuration;
-      const interval = setInterval(() => {
-        bonusTimer--;
-        bonusButton6.textContent = `Bonus 6 (${bonusTimer}s)`;
-
-        score += bonusIncrement;
-        updateScore();
-
-        if (bonusTimer <= 0) {
-          clearInterval(interval);
-          bonusActive = false;
-          bonusButton6.textContent = "LIKE A BEAR | Cost: 250 000";
-          bonusButton6.disabled = false;
-
-          stopButtonAnimation(bonusButton6);
-
-          // Retirer la vidéo de la page
+        // Ajouter un gestionnaire d'événement pour retirer la vidéo à la fin de la lecture
+        videoElement.addEventListener("ended", () => {
           document.body.removeChild(videoElement);
-        }
-      }, 1000);
-    }
-    purchaseSound.currentTime = 0;
-    purchaseSound.play();
+        });
+
+        document.body.appendChild(videoElement);
+
+        let bonusTimer = bonusDuration;
+        const interval = setInterval(() => {
+          bonusTimer--;
+          bonusButton6.textContent = `Bonus 6 (${bonusTimer}s)`;
+
+          score += bonusIncrement;
+          updateScore();
+
+          if (bonusTimer <= 0) {
+            clearInterval(interval);
+            bonusActive = false;
+            bonusButton6.textContent = "LIKE A BEAR | Cost: 250 000";
+            bonusButton6.disabled = false;
+
+            stopButtonAnimation(bonusButton6);
+
+            // Retirer la vidéo de la page
+            document.body.removeChild(videoElement);
+          }
+        }, 1000);
+      }
+      purchaseSound.currentTime = 0;
+      purchaseSound.play();
+    }, 5000); // Définir un délai de 5000 millisecondes (5 secondes)
   });
 
   bonusButton7.addEventListener("click", () => {
