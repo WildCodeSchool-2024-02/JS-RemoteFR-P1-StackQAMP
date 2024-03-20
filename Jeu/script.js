@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     particlesContainer.innerHTML = "";
 
-    const particleImages = ["img/bout1.png", "img/bout2.png"];
+    const particleImages = ["../img/bout1.png", "../img/bout2.png"];
 
     const numParticles = 15;
     for (let i = 0; i < numParticles; i++) {
@@ -563,7 +563,7 @@ document.addEventListener("DOMContentLoaded", function () {
         enableButtonAnimation(bonusButton6);
 
         const videoElement = document.createElement("video");
-        videoElement.src = "video/BEAR.mp4";
+        videoElement.src = "../video/BEAR.mp4";
         videoElement.autoplay = true;
         videoElement.controls = false;
         videoElement.controlsList = "nodownload";
