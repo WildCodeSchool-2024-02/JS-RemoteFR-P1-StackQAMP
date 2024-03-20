@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
 :root {
-  --color-background-page: #fef9d8;
-  --color-background-header-footer: rgba(217, 140, 79, 1);
+  background: linear-gradient(to bottom, #D98C4F, #C56CC5);
   --color-text-ul: rgba(236, 199, 70, 1);
   --color-tilte: rgba(155, 51, 86, 1);
   font-family: "montserrat", sans-serif;
@@ -13,9 +15,8 @@
   line-height: 1.5;
 }
 
-header,
 footer {
-  background-color: var(--color-background-header-footer);
+  background: linear-gradient(to bottom, #C56CC5, #4B0082);
 }
 
 /* BODY */
@@ -23,8 +24,6 @@ footer {
 body {
   margin: 0;
   justify-content: space-between;
-  background-color: var(--color-background-page);
-
   margin: 0;
 }
 
@@ -54,7 +53,7 @@ header {
 
 /* Sidenav menu */
 .sidenav {
-  height: 6.8rem;
+  height: 7.2rem;
   width: 100%;
   position: fixed;
   z-index: 1;
@@ -63,7 +62,7 @@ header {
   background-color: #e8e8e8;
   padding-top: 3.7rem;
   transition: left 0.5s ease;
-  background: var(--color-background-header-footer);
+  background: linear-gradient(to bottom, #4B0082, #D98C4F);
 }
 
 /* Sidenav menu links */
@@ -133,17 +132,19 @@ header {
     flex-direction: row;
     justify-content: space-between;
   }
-  .sidenav {
-    height: 7.8rem;
-    width: 7.8rem;
-    position: static;
-    z-index: 1;
-    top: auto;
-    left: auto;
-    padding-top: 0;
-    transition: auto;
-    font-size: 4rem;
-  }
+    .sidenav {
+      height: auto;
+      width: auto;
+      position: static;
+      z-index: 1;
+      top: auto;
+      left: auto;
+      background-color: var(--color-background-header-footer);
+      padding-top: 0;
+      transition: auto;
+      font-size: 4rem;
+      background: none;
+    }
 
   .sidenav a,
   ul,
@@ -165,6 +166,7 @@ h1 {
     1px 1px 0 #000, 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 80px;
   font-weight: 800;
+  font-family: "honk";
 }
 
 /* Bonus */
@@ -178,7 +180,6 @@ h1 {
 }
 
 .score {
-  font-family: "Inter", sans-serif;
   font-weight: bold;
   font-size: 800px;
   color: black;
@@ -190,13 +191,7 @@ html {
   line-height: 1.5;
 }
 
-header,
-footer {
-  background-color: var(--color-background-header-footer);
-  box-shadow: inset 0 -3em 3em var(--color-background-header-footer),
-    0 0 0 2px var(--color-background-header-footer),
-    0.3em 0.3em 1em var(--color-background-header-footer);
-}
+
 
 /* BODY */
 
@@ -213,7 +208,7 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 10rem;
-
+  background: linear-gradient(to bottom, #4B0082, #D98C4F);
   img {
     width: 10rem;
   }
@@ -234,8 +229,8 @@ footer {
   text-align: center;
   font-size: 0.7rem;
   line-height: 1;
-  color: var(--color-text-ul);
-  text-shadow: black -1px 0.5px, black -1px 0.5px, black -1px 0.5px;
+  color: black;
+  font-family: "madimi one";
 }
 
 @media screen and (min-width: 768px) {
@@ -282,11 +277,9 @@ input[type="text"] {
 .mainprinc {
   display: flex;
   flex-direction: column;
-
-  background-color: #d98c4f;
   margin: 0 120px 0 120px;
   border-radius: 5px;
-  height: 1256px;
+  height: 78rem;
   box-shadow: inset 0 -3em 3em var(--color-background-header-footer),
     0 0 0 2px var(--color-background-header-footer),
     0.3em 0.3em 1em var(--color-background-header-footer);
@@ -295,9 +288,9 @@ input[type="text"] {
 @media screen and (max-width: 767px) {
   .mainprinc {
     display: flex;
-    margin: 0 20% 0 22%;
-    width: 350px;
-    height: 1250px;
+    margin: 0 102.8px 0 85px;
+    width: 21.9rem;
+    height: 87.5rem;
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -350,6 +343,12 @@ button.disabled:hover {
 }
 
 @media screen and (max-width: 767px) {
+  #etc5 {
+    grid-column: span 2;
+    width: 20.5rem;
+}}
+
+@media screen and (max-width: 767px) {
   button.disabled {
     width: 150px;
   }
@@ -391,7 +390,7 @@ button.enabled-animation {
 }
 
 #score {
-  color: #784fa1;
+  font-family: "madimi one";
   font-size: 55px;
   margin-bottom: 20px;
   font-weight: 800;
@@ -403,6 +402,7 @@ button.enabled-animation {
   cursor: pointer;
   user-select: none;
   transition: transform 0.2s ease;
+  filter: drop-shadow(14px 14px 10px #fef9d8);
 }
 
 .flex {
@@ -639,13 +639,13 @@ button.enabled-animation {
 }
 
 .textpop {
-  font-size: 36px;
+  font-size: 1.7rem;
   border-radius: 15px;
 }
 
 @media screen and (max-width: 767px) {
   .textpop {
-    font-size: 10px;
+    font-size: 1rem;
   }
 }
 

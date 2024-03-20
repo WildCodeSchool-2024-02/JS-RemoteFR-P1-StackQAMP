@@ -1,67 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="general.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <title>StackQamp</title>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <div class="navflex">
-      <img src="./assets/logo_stackquamp.png" alt="logo StackQamp" />
+            <img src="./assets/logo_stackquamp.png" alt="logo StackQamp" />
 
-      <!-- close burger -->
-      <nav id="mySidenav" class="sidenav">
-        <a id="closeBtn" href="#" class="close">x</a>
-        <ul>
-          <li><a href="./index.html">Accueil</a></li>
-          <li><a href="./jeu.html">Jeu</a></li>
-          <li><a href="./regles.html">Régle</a></li>
-          <li><a href="./credit.html">Crédit</a></li>
-        </ul>
-      </nav>
-    </div>
-      <!-- open burger -->
-      <a href="#" id="openBtn">
-        <span class="burger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </a>
+            <!-- close burger -->
+            <nav id="mySidenav" class="sidenav">
+                <a id="closeBtn" href="#" class="close">x</a>
+                <ul>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./jeu.html">Jeu</a></li>
+                    <li><a href="./regles.html">Régle</a></li>
+                    <li><a href="./credit.html">Crédit</a></li>
+                </ul>
+            </nav>
+        <!-- open burger -->
+        <a href="#" id="openBtn">
+            <span class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </a>
 
     </header>
     <main>
-      <h1 class="accueiltitle">Pan'Click</h1>
+        <h1 class="accueiltitle">PAN'CLICK</h1>
 
-      <div class="midacceuil">
-        <img
-          class="imgaccueil"
-          src="./assets/pancakes_and_fruits.png"
-          alt="pancakes avec des myrtilles et des franboises"
-        />
+        <div class="midacceuil">
+            <img
+                class="imgaccueil"
+                src="./assets/pancakes_and_fruits.png"
+                alt="pancakes avec des myrtilles et des franboises"
+            />
 
-        <button class="buttonjouer" onclick="window.location.href='jeu.html'">
-          PLAY
-        </button>
+            <button class="buttonjouer" onclick="window.location.href='jeu.html'">
+                PLAY
+            </button>
+        </div>
+
+        <div class="content">
+          
+          <img src="img/chatrobot.png" alt="Votre image" id="openModalButton">
+  
+         
+          <div id="robotModal" class="modal">
+              
+              <div class="modal-content">
+                  
+                  <button id="closeModalButton">Fermer</button>
+                  
+              </div>
+          </div>
       </div>
+  
+      <script src="Robot.chat/robot.js"></script>
     </main>
     <footer>
-      <p>&copy; wilders 2024</p>
-      <p>Equipe STACKQUAMP</p>
-      <p>créée par</p>
-      <p class="cree">
-        Amel BONNEVIE, Quentin THUILLIER, Pierre DELAROCQUE, Mégane AUTHEMAYOU
-      </p>
+        <p>&copy; wilders 2024</p>
+        <p>Equipe STACKQUAMP</p>
+        <p>créée par</p>
+        <p class="cree">
+            Amel BONNEVIE, Quentin THUILLIER, Pierre DELAROCQUE, Mégane AUTHEMAYOU
+        </p>
     </footer>
     <script src="./index.js"></script>
-  </body>
+</body>
 </html>
