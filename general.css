@@ -270,9 +270,27 @@ section {
   -o-transition: all 0.2s;
   transition: all 0.2s;
   margin: 2em;
+  cursor: pointer;
 }
 .profile:hover {
   transform: scale(1.2);
+}
+
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: confetti-fall 3s linear infinite; /* Durée de 3 secondes */
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100vw, 100vh);
+  }
 }
 
 .ligne-p {
