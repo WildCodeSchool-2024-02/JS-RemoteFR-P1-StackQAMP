@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     particlesContainer.innerHTML = "";
 
-    const particleImages = ["../img/bout1.png", "../img/bout2.png"];
+    const particleImages = ["/img/bout1.png", "/img/bout2.png"];
 
     const numParticles = 15;
     for (let i = 0; i < numParticles; i++) {
@@ -403,7 +403,7 @@ document.addEventListener("DOMContentLoaded", function () {
         element.style.display = "none";
       });
       const gifElement = document.createElement("img");
-      gifElement.src = "gif/200w.gif";
+      gifElement.src = "/gif/200w.gif";
       gifElement.style.position = "fixed";
       gifElement.style.top = "50%";
       gifElement.style.left = "50%";
