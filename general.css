@@ -1,14 +1,13 @@
 /* Variable */
 
-@import url('https://fonts.googleapis.com/css2?family=Honk&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
 
 :root {
-  --background: linear-gradient(to bottom, #D98C4F, #C56CC5);
+  --background: linear-gradient(to bottom, #d98c4f, #c56cc5);
   --color-background-header-footer: rgba(217, 140, 79, 1);
   --color-text-ul: rgba(236, 199, 70, 1);
   --color-tilte: rgba(155, 51, 86, 1);
-  
 }
 
 .ligne-p {
@@ -58,7 +57,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin: 0 0 120px 0;
-  background:none;
+  background: none;
   border-radius: 20%;
   border: solid 5px black;
   font-family: "madimi one";
@@ -85,27 +84,6 @@ button:hover {
   margin-top: 50px;
 }
 
-/* Styles pour la fenêtre modale */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 400px;
-}
 /*  GENERAL */
 
 * {
@@ -115,8 +93,8 @@ button:hover {
 
 footer {
   /*background-color: var(--color-background-header-footer);*/
-  background: linear-gradient(to bottom, #C56CC5, #4B0082);
- /* box-shadow: inset 0 -3em 3em var(--color-background-header-footer),
+  background: linear-gradient(to bottom, #c56cc5, #4b0082);
+  /* box-shadow: inset 0 -3em 3em var(--color-background-header-footer),
     0 0 0 2px var(--color-background-header-footer),
     0.3em 0.3em 1em var(--color-background-header-footer);*/
 }
@@ -138,7 +116,7 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 10rem;
-  background: linear-gradient(to bottom, #4B0082, #D98C4F);
+  background: linear-gradient(to bottom, #4b0082, #d98c4f);
 
   img {
     width: 10rem;
@@ -167,7 +145,7 @@ header {
   background-color: #e8e8e8;
   padding-top: 3.7rem;
   transition: left 0.5s ease;
-  background: linear-gradient(to bottom, #4B0082, #D98C4F);
+  background: linear-gradient(to bottom, #4b0082, #d98c4f);
   display: flex;
   text-align: center;
 }
@@ -234,18 +212,18 @@ header {
 /* Media queries burger menu */
 
 @media screen and (min-width: 768px) {
-    .sidenav {
-      height: auto;
-      width: auto;
-      position: static;
-      z-index: 1;
-      top: auto;
-      left: auto;
-      padding-top: 0;
-      transition: auto;
-      font-size: 4rem;
-      background: none;
-    }
+  .sidenav {
+    height: auto;
+    width: auto;
+    position: static;
+    z-index: 1;
+    top: auto;
+    left: auto;
+    padding-top: 0;
+    transition: auto;
+    font-size: 4rem;
+    background: none;
+  }
 
   .sidenav a,
   ul,
@@ -420,7 +398,7 @@ footer {
   text-align: center;
   font-size: 0.7rem;
   line-height: 1;
-  background-color: linear-gradient(to bottom, #4B0082, #D98C4F);
+  background-color: linear-gradient(to bottom, #4b0082, #d98c4f);
   color: black;
   font-family: "madimi one";
 }
