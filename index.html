@@ -18,7 +18,7 @@
                 <a id="closeBtn" href="#" class="close">x</a>
                 <ul>
                     <li><a href="./index.html">Accueil</a></li>
-                    <li><a href="./jeu.html">Jeu</a></li>
+                    <li><a href="./Jeu/jeu.html">Jeu</a></li>
                     <li><a href="./regles.html">Régle</a></li>
                     <li><a href="./credit.html">Crédit</a></li>
                 </ul>
@@ -48,22 +48,20 @@
             </button>
         </div>
 
-        <div class="content">
-          
-          <img src="img/chatrobot.png" alt="Votre image" id="openModalButton">
-  
-         
-          <div id="robotModal" class="modal">
-              
-              <div class="modal-content">
-                  
-                  <button id="closeModalButton">Fermer</button>
-                  
+        <body>
+          <div class="content">
+              <button id="openRobotModalButton">Ouvrir le robot</button>
+      
+              <div id="robotModal" class="modal" style="display: none;">
+                  <div class="modal-content">
+                      <div id="chat-messages"></div>
+                      <input type="text" id="user-input" placeholder="Saisissez votre message ici...">
+                      <button id="sendButton">Envoyer</button>
+                  </div>
               </div>
           </div>
-      </div>
-  
-      <script src="Robot.chat/robot.js"></script>
+
+      <script src="Robot/robot.js"></script>
     </main>
     <footer>
         <p>&copy; wilders 2024</p>

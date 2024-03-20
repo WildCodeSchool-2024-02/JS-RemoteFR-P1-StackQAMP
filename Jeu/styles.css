@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 
 :root {
-  -background: linear-gradient(to bottom, #D98C4F, #C56CC5);
+  background: linear-gradient(to bottom, #D98C4F, #C56CC5);
   --color-text-ul: rgba(236, 199, 70, 1);
   --color-tilte: rgba(155, 51, 86, 1);
   font-family: "montserrat", sans-serif;

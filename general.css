@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 
 :root {
-  background: linear-gradient(to bottom, #D98C4F, #C56CC5);
+  --background: linear-gradient(to bottom, #D98C4F, #C56CC5);
   --color-background-header-footer: rgba(217, 140, 79, 1);
   --color-text-ul: rgba(236, 199, 70, 1);
   --color-tilte: rgba(155, 51, 86, 1);
@@ -80,7 +80,32 @@ button:hover {
   align-items: center;
 }
 
+.content {
+  text-align: center;
+  margin-top: 50px;
+}
 
+/* Styles pour la fenêtre modale */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+}
 /*  GENERAL */
 
 * {
