@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     particlesContainer.innerHTML = "";
 
-    const particleImages = ["bout1.png", "bout2.png", "TESTASUPPR.jpg"];
+    const particleImages = ["img/bout1.png", "img/bout2.png"];
 
     const numParticles = 15;
     for (let i = 0; i < numParticles; i++) {

@@ -15,7 +15,7 @@
 /* ACCUEIL */
 
 .accueiltitle {
-  font-size: 4rem;
+  font-size: 160px;
   font-weight: bold;
   margin: 67px 0 0 0;
 }
@@ -135,7 +135,7 @@ header {
   background-color: #e8e8e8;
   padding-top: 3.7rem;
   transition: left 0.5s ease;
-  background:var(--color-background-header-footer);
+  background: var(--color-background-header-footer);
 }
 
 /* Sidenav menu links */
@@ -200,11 +200,11 @@ header {
 /* Media queries burger menu */
 
 @media screen and (min-width: 768px) {
-.navflex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+  .navflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .sidenav {
     height: 7.8rem;
     width: 7.8rem;
