@@ -39,3 +39,35 @@ Atteignez des scores élevés : Continuez à cliquer et à améliorer votre prod
 Clonez ce dépôt sur votre machine locale en utilisant la commande git clone.
 Ouvrez le fichier index.html dans votre navigateur web.
 Commencez à cliquer sur les pancakes et à profiter du jeu !
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🚀 **Projet Pan'Click**
+
+### Versions :
+- **Version 1 (V1) :**
+  - Ajout initial du clicker HTML / CSS / JS.
+  - Mise à jour du fichier README.md.
+  - Ajout de 3 boutons avec HTML, CSS et JS.
+  - Finalisation de la page d'accueil.
+  - Modifications dans le fichier script.js.
+  - Fusion des branches dans la branche principale (main).
+  - Mise à jour du fichier styles.css.
+  - Modifications des fichiers CSS pour les pages de jeu, règles, crédit et accueil.
+  - Dernière modification effectuée.
+  - Finalisation de la page d'accueil.
+
+- **Version 1.2 (V1.2) :**
+  - Ajout des confettis, suppression du déplacement des images dans la section des crédits, et autres réglages.
+  - Mise à jour du fichier styles.css.
+  - Mise à jour du fichier README.md.
+ 
+  - **Version 1.2.5 (V1.2.5) :**
+  - Mise à jour du style pour le texte dans les popups.
+  - Réglage de bugs et ajout de la commande giveMoney.
+  - Réglage de bugs et ajout du prix réel.
+
+- **Version 1.3 (V1.3) :**
+  - .
+
+
+
