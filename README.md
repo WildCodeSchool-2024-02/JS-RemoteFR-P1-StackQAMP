@@ -35,7 +35,7 @@ Si vous avez des questions ou des suggestions, n'hésitez pas à les partager !
 🚀 **Projet Pan'Click**
 
 ### Versions :
-- **Version 1 (V1) :**
+### Version 1 (V1) :**
   - Ajout initial du clicker HTML / CSS / JS.
   - Mise à jour du fichier README.md.
   - Ajout de 3 boutons avec HTML, CSS et JS.
@@ -59,11 +59,11 @@ Si vous avez des questions ou des suggestions, n'hésitez pas à les partager !
 
 ### Version 1.3 (V1.3)
 
-#### Changes:
-- Bug fixes.
-- Updated `jeu.html`.
-- Merged `main` branch.
-- Other bug adjustments.
+#### Modifications :
+- Corrections de bugs.
+- Mise à jour de `jeu.html`.
+- Fusion de la branche `main`.
+- Autres ajustements de bugs.
 
 
 
