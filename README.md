@@ -34,8 +34,8 @@ Si vous avez des questions ou des suggestions, n'hésitez pas à les partager !
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🚀 **Projet Pan'Click**
 
-### Versions :
-- **Version 1 (V1) :**
+### Versions 
+### Version 1 (V1) 
   - Ajout initial du clicker HTML / CSS / JS.
   - Mise à jour du fichier README.md.
   - Ajout de 3 boutons avec HTML, CSS et JS.
@@ -47,18 +47,23 @@ Si vous avez des questions ou des suggestions, n'hésitez pas à les partager !
   - Dernière modification effectuée.
   - Finalisation de la page d'accueil.
 
-- **Version 1.2 (V1.2) :**
+  ### Version 1.2 (V1.2) 
   - Ajout des confettis, suppression du déplacement des images dans la section des crédits, et autres réglages.
   - Mise à jour du fichier styles.css.
   - Mise à jour du fichier README.md.
  
 - **Version 1.2.5 (V1.2.5) :**
   - Mise à jour du style pour le texte dans les popups.
-  - Réglage de bugs et ajout de la commande giveMoney.
+  - Réglage de bugs et ajout de la commande ####.
   - Réglage de bugs et ajout du prix réel.
 
-- **Version 1.3 (V1.3) :**
-  - .
+### Version 1.3 (V1.3)
+
+#### Modifications :
+- Corrections de bugs.
+- Mise à jour de `jeu.html`.
+- Fusion de la branche `main`.
+- Autres ajustements de bugs.
 
 
 
