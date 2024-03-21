@@ -34,8 +34,8 @@ Si vous avez des questions ou des suggestions, n'hésitez pas à les partager !
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🚀 **Projet Pan'Click**
 
-### Versions :
-### Version 1 (V1) :**
+### Versions 
+### Version 1 (V1) 
   - Ajout initial du clicker HTML / CSS / JS.
   - Mise à jour du fichier README.md.
   - Ajout de 3 boutons avec HTML, CSS et JS.
@@ -47,7 +47,7 @@ Si vous avez des questions ou des suggestions, n'hésitez pas à les partager !
   - Dernière modification effectuée.
   - Finalisation de la page d'accueil.
 
-  ### Version 1.2 (V1.2) :**
+  ### Version 1.2 (V1.2) 
   - Ajout des confettis, suppression du déplacement des images dans la section des crédits, et autres réglages.
   - Mise à jour du fichier styles.css.
   - Mise à jour du fichier README.md.
