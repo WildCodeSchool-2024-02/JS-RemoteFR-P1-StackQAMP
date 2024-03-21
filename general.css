@@ -15,13 +15,12 @@
 /* ACCUEIL */
 
 .accueiltitle {
-  font-size: 160px;
   font-weight: bold;
   margin: 67px 0 0 0;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 767px) {
   .accueiltitle {
-    font-size: 80px;
+    font-size: 10rem;
   }
 }
 
@@ -38,7 +37,7 @@
 .imgaccueil:hover {
   transform: scale(1.2);
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 767px) {
   .imgaccueil {
     width: 450px;
     height: auto;
@@ -60,7 +59,7 @@
   border: solid 5px black;
   font-family: "madimi one";
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 767px) {
   .buttonjouer {
     width: 18rem;
     font-size: 3.5rem;
@@ -230,10 +229,6 @@ header {
 
 h1 {
   text-align: center;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000, 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: 80px;
-  font-weight: 800;
   font-family: "honk";
 }
 
@@ -352,7 +347,7 @@ span {
 }
 
 h1 {
-  font-size: 300%;
+  font-size: 5rem;
   font-weight: 800;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000, 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -389,7 +384,7 @@ h2 {
 ul {
   word-spacing: 2px;
   font-family: "madimi one";
-  text-align: center;
+  list-style: none;
 }
 
 /* FOOTER */
