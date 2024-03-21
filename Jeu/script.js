@@ -403,7 +403,7 @@ document.addEventListener("DOMContentLoaded", function () {
         element.style.display = "none";
       });
       const gifElement = document.createElement("img");
-      gifElement.src = "/gif/200w.gif";
+      gifElement.src = "../gif/200w.gif";
       gifElement.style.position = "fixed";
       gifElement.style.top = "50%";
       gifElement.style.left = "50%";
