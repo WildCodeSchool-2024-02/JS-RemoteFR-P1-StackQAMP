@@ -47,7 +47,7 @@ Si vous avez des questions ou des suggestions, n'hésitez pas à les partager !
   - Dernière modification effectuée.
   - Finalisation de la page d'accueil.
 
-- **Version 1.2 (V1.2) :**
+  ### Version 1.2 (V1.2) :**
   - Ajout des confettis, suppression du déplacement des images dans la section des crédits, et autres réglages.
   - Mise à jour du fichier styles.css.
   - Mise à jour du fichier README.md.
@@ -57,8 +57,13 @@ Si vous avez des questions ou des suggestions, n'hésitez pas à les partager !
   - Réglage de bugs et ajout de la commande giveMoney.
   - Réglage de bugs et ajout du prix réel.
 
-- **Version 1.3 (V1.3) :**
-  - .
+### Version 1.3 (V1.3)
+
+#### Changes:
+- Bug fixes.
+- Updated `jeu.html`.
+- Merged `main` branch.
+- Other bug adjustments.
 
 
 
