@@ -54,7 +54,7 @@ Si vous avez des questions ou des suggestions, n'hésitez pas à les partager !
  
 - **Version 1.2.5 (V1.2.5) :**
   - Mise à jour du style pour le texte dans les popups.
-  - Réglage de bugs et ajout de la commande giveMoney.
+  - Réglage de bugs et ajout de la commande ####.
   - Réglage de bugs et ajout du prix réel.
 
 ### Version 1.3 (V1.3)
