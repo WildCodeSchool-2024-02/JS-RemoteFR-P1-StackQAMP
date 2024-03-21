@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (bonusTimer <= 0) {
           clearInterval(interval);
           bonusActive = false;
-          bonusButton.textContent = "Bonus - Cost: 5000";
+          bonusButton.textContent = "🍄 LIKE MARIO | Cost: 5000";
           bonusButton.disabled = false;
           bonusButton.classList.add("grow");
           stopButtonAnimation(bonusButton);
@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", function () {
           clearInterval(interval);
           clearInterval(countdownInterval);
           bonusActive = false;
-          bonusButton2.textContent = "Bonus 2 - Cost: 15 000";
+          bonusButton2.textContent = "🙃 REVERSE HEAD | Cost: 15 000";
           bonusButton2.disabled = false;
           bonusButton2.classList.add("grow");
           clickImage.style.filter = "";
@@ -494,7 +494,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (bonusTimer <= 0) {
             clearInterval(interval);
             bonusActive = false;
-            bonusButton5.textContent = "He is broken :/ - Cost: 100 000";
+            bonusButton5.textContent = "💔He is broken :/ - Cost: 100 000";
             bonusButton5.disabled = false;
             bonusButton5.classList.add("grow");
 
@@ -591,7 +591,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (bonusTimer <= 0) {
             clearInterval(interval);
             bonusActive = false;
-            bonusButton6.textContent = "LIKE A BEAR | Cost: 250 000";
+            bonusButton6.textContent = "🧸 LIKE A BEAR | Cost: 250 000";
             bonusButton6.disabled = false;
 
             stopButtonAnimation(bonusButton6);
