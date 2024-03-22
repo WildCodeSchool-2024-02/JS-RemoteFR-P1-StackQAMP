@@ -65,5 +65,14 @@ Si vous avez des questions ou des suggestions, n'hésitez pas à les partager !
 - Fusion de la branche `main`.
 - Autres ajustements de bugs.
 
+### Version 1.4 (V1.4)
+
+#### Modification :
+- Tous les bugs résolus.
+- Site testé et fonctionnel.
+- Responsive optimisé.
+- Bonus réglés
+- Taille de police, marge, padding, border ajustés pour GitHub.
+
 
 
